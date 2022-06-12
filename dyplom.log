@@ -1,0 +1,549 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.12)  12 JUN 2022 17:09
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Files/Uniwersytet/Dyplom/doc/dyplom.tex
+(c:/Files/Uniwersytet/Dyplom/doc/dyplom.tex
+LaTeX2e <2022-06-01> pre-release-0 (develop 2022-6-12 branch)
+L3 programming layer <2022-06-02> (c:/texlive/2022/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
+(c:/texlive/2022/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (c:/texlive/2022/texmf-dist/tex/latex/polski/polski.sty
+Package: polski 2021/08/25 v1.3.6 Polish language package
+
+   Switching to Polish text encoding and Polish maths fonts.
+(c:/texlive/2022/texmf-dist/tex/latex/base/ot4enc.def
+File: ot4enc.def 2021/04/29 v2.0v Standard LaTeX file
+Now handling font encoding OT4 ...
+... no UTF-8 mapping file for font encoding OT4
+)
+LaTeX Font Info:    Trying to load font information for OT4+cmr on input line 362.
+ (c:/texlive/2022/texmf-dist/tex/latex/polski/ot4cmr.fd
+File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT4/cmr/bx/n on input line 362.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT4/cmss/m/n on input line 362.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT4/cmr/m/it on input line 362.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT4/cmtt/m/n on input line 362.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT4/cmss/bx/n on input line 362.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT4/cmr/bx/it on input line 362.
+LaTeX Font Info:    Encoding `OT1' has changed to `OT4' for symbol font
+(Font)              `operators' in the math version `normal' on input line 362.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT4/cmr/m/n on input line 362.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/plm/m/it on input line 362.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/plsy/m/n on input line 362.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/plex/m/n on input line 362.
+LaTeX Font Info:    Encoding `OT1' has changed to `OT4' for symbol font
+(Font)              `operators' in the math version `bold' on input line 362.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT4/cmr/bx/n on input line 362.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/plm/b/it on input line 362.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/plsy/b/n on input line 362.
+) (c:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+) (c:/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/05/18 v4.0.3 Extensive control of page headers and footers
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+) (c:/texlive/2022/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+) (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen141
+)) (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+) (c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks20
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks21
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks22
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (c:/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (c:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count272
+\Gm@cntv=\count273
+\c@Gm@tempcnt=\count274
+\Gm@bindingoffset=\dimen150
+\Gm@wd@mp=\dimen151
+\Gm@odd@mp=\dimen152
+\Gm@even@mp=\dimen153
+\Gm@layoutwidth=\dimen154
+\Gm@layoutheight=\dimen155
+\Gm@layouthoffset=\dimen156
+\Gm@layoutvoffset=\dimen157
+\Gm@dimlist=\toks24
+) (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (c:/texlive/2022/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2022/05/22 v0.5v Insert pages of external PDF documents (AM)
+ (c:/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (c:/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count275
+\calc@Bcount=\count276
+\calc@Adimen=\dimen158
+\calc@Bdimen=\dimen159
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count277
+\calc@Cskip=\skip63
+) (c:/texlive/2022/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen160
+\ESO@tempdimb=\dimen161
+ (c:/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+))
+\AM@pagewidth=\dimen162
+\AM@pageheight=\dimen163
+\AM@fboxrule=\dimen164
+ (c:/texlive/2022/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2022/05/22 v0.5v Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count278
+\AM@pagebox=\box53
+\AM@global@opts=\toks25
+\AM@pagecnt=\count279
+\AM@toc@title=\toks26
+\c@AM@survey=\count280
+\AM@templatesizebox=\box54
+) (c:/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.sty (c:/texlive/2022/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (c:/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-06-02 L3 programming layer (loader) 
+ (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count281
+\l__pdf_internal_box=\box55
+))
+Package: l3keys2e 2022-06-07 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count282
+\l__lipsum_a_int=\count283
+\l__lipsum_b_int=\count284
+ (c:/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (c:/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count285
+\multirow@dima=\skip65
+\bigstrutjot=\dimen165
+) (c:/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count286
+\lst@gtempboxa=\box56
+\lst@token=\toks27
+\lst@length=\count287
+\lst@currlwidth=\dimen166
+\lst@column=\count288
+\lst@pos=\count289
+\lst@lostspace=\dimen167
+\lst@width=\dimen168
+\lst@newlines=\count290
+\lst@lineno=\count291
+\lst@maxwidth=\dimen169
+ (c:/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count292
+\lst@skipnumbers=\count293
+\lst@framebox=\box57
+) (c:/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (c:/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (c:/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen170
+\captionmargin=\dimen171
+\caption@leftmargin=\dimen172
+\caption@rightmargin=\dimen173
+\caption@width=\dimen174
+\caption@indent=\dimen175
+\caption@parindent=\dimen176
+\caption@hangindent=\dimen177
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count294
+\c@continuedfloat=\count295
+Package caption Info: listings package is loaded.
+) (c:/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen178
+\lightrulewidth=\dimen179
+\cmidrulewidth=\dimen180
+\belowrulesep=\dimen181
+\belowbottomsep=\dimen182
+\aboverulesep=\dimen183
+\abovetopsep=\dimen184
+\cmidrulesep=\dimen185
+\cmidrulekern=\dimen186
+\defaultaddspace=\dimen187
+\@cmidla=\count296
+\@cmidlb=\count297
+\@aboverulesep=\dimen188
+\@belowrulesep=\dimen189
+\@thisruleclass=\count298
+\@lastruleclass=\count299
+\@thisrulewidth=\dimen190
+) (c:/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count300
+\c@subtable=\count301
+)
+Package caption Info: Option `declare type' requires the `newfloat' package on input line 24.
+ (c:/texlive/2022/texmf-dist/tex/latex/newfloat/newfloat.sty
+Package: newfloat 2019/09/02 v1.1l Defining new floating environments (AR)
+Package newfloat Info: Document class `book' detected.
+)
+Package newfloat Info: New float `code' with options `' on input line 24.
+\c@code=\count302
+\newfloat@ftype=\count303
+Package newfloat Info: float type `code'=8 on input line 24.
+\c@subcode=\count304
+
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 56.
+
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 58.
+
+(./dyplom.aux)
+\openout1 = `dyplom.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+ (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count305
+\scratchdimen=\dimen191
+\scratchbox=\box58
+\nofMPsegments=\count306
+\nofMParguments=\count307
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count308
+\MPscratchDim=\dimen192
+\MPnumerator=\count309
+\makeMPintoPDFobject=\count310
+\everyMPtoPDFconversion=\toks29
+) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-31.8738pt
+* \headheight=13.5pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=38.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2022/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+\c@lstlisting=\count311
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+
+pdfTeX warning: pdflatex.exe (file ./stronaTytulowa.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<stronatytulowa.pdf, id=1, 597.55246pt x 845.07718pt>
+File: stronatytulowa.pdf Graphic file (type pdf)
+<use stronatytulowa.pdf>
+Package pdftex.def Info: stronatytulowa.pdf  used on input line 73.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./stronaTytulowa.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+File: stronatytulowa.pdf Graphic file (type pdf)
+<use stronatytulowa.pdf>
+Package pdftex.def Info: stronatytulowa.pdf  used on input line 73.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./stronaTytulowa.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex.exe (file ./stronaTytulowa.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<stronatytulowa.pdf, id=4, page=1, 597.55246pt x 845.07718pt>
+File: stronatytulowa.pdf Graphic file (type pdf)
+<use stronatytulowa.pdf, page 1>
+Package pdftex.def Info: stronatytulowa.pdf , page1 used on input line 73.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: stronatytulowa.pdf Graphic file (type pdf)
+<use stronatytulowa.pdf, page 1>
+Package pdftex.def Info: stronatytulowa.pdf , page1 used on input line 73.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: stronatytulowa.pdf Graphic file (type pdf)
+<use stronatytulowa.pdf, page 1>
+Package pdftex.def Info: stronatytulowa.pdf , page1 used on input line 73.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: stronatytulowa.pdf Graphic file (type pdf)
+<use stronatytulowa.pdf, page 1>
+Package pdftex.def Info: stronatytulowa.pdf , page1 used on input line 73.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: stronatytulowa.pdf Graphic file (type pdf)
+<use stronatytulowa.pdf, page 1>
+Package pdftex.def Info: stronatytulowa.pdf , page1 used on input line 73.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+[1
+
+ <./stronaTytulowa.pdf>] (./dyplom.toc
+LaTeX Font Info:    Trying to load font information for OML+plm on input line 4.
+ (c:/texlive/2022/texmf-dist/tex/latex/polski/omlplm.fd
+File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 4.
+ (c:/texlive/2022/texmf-dist/tex/latex/polski/omsplsy.fd
+File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    Trying to load font information for OMX+plex on input line 4.
+ (c:/texlive/2022/texmf-dist/tex/latex/polski/omxplex.fd
+File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <12> on input line 4.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write3
+\openout3 = `dyplom.toc'.
+
+ [2
+
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [3
+
+] [4
+
+]
+Rozdzia\PlPrIeC {\l } 1.
+<./grafika//L-system-fractal.svg.png, id=53, 393.47pt x 902.37125pt>
+File: ./grafika//L-system-fractal.svg.png Graphic file (type png)
+<use ./grafika//L-system-fractal.svg.png>
+Package pdftex.def Info: ./grafika//L-system-fractal.svg.png  used on input line 148.
+(pdftex.def)             Requested size: 86.84584pt x 199.16928pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5
+
+] [6 <./grafika//L-system-fractal.svg.png>]
+Rozdzia\PlPrIeC {\l } 2.
+[7
+
+]
+Rozdzia\PlPrIeC {\l } 3.
+[8
+
+]
+Rozdzia\PlPrIeC {\l } 4.
+[9
+
+]
+Rozdzia\PlPrIeC {\l } 5.
+[10
+
+] (./dyplom.aux) ) 
+Here is how much of TeX's memory you used:
+ 8532 strings out of 478040
+ 139298 string characters out of 5843119
+ 530247 words of memory out of 5000000
+ 26841 multiletter control sequences out of 15000+600000
+ 479323 words of font info for 55 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 72i,17n,77p,274b,430s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/pl/plbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/pl/plbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/pl/plr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/pl/plr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on dyplom.pdf (10 pages, 238319 bytes).
+PDF statistics:
+ 101 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+
