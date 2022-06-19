@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,oneside]{book} % nie: report!
+\documentclass[a4paper,12pt,twoside]{book} % nie: report!
 
 
 % pakiety
@@ -8,9 +8,10 @@
 \usepackage{indentfirst} % WAŻNE, MA BYĆ!
 \usepackage[pdftex]{graphicx} % to do wstawiania rysunków
 \usepackage{amsmath} % to do dodatkowych symboli, przydatne
-\usepackage[pdftex,
-            left=1in,right=1in,
-            top=1in,bottom=1in]{geometry} % marginsy
+\usepackage[inner=3.5cm,outer=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+% \usepackage[pdftex,
+%             left=1in,right=1in,
+%             top=1in,bottom=1in]{geometry} % marginsy
 \usepackage{amssymb} % to też do dodatkowych symboli, też przydatne
 \usepackage{pdfpages}
 \usepackage{lipsum}
@@ -23,6 +24,7 @@
 \usepackage{url}
 \usepackage{tikz} 
 \usepackage{svg}
+\usepackage{lipsum}  
 \graphicspath{ {./grafika/} }
 \DeclareCaptionType{code}[Listing][Spis listingów] 
 
@@ -54,20 +56,27 @@
 
 % definicje nagłówków i stopek
 \pagestyle{fancy}
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+% \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+% \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \fancyhf{}
-\fancyhead[LE,RO]{\footnotesize\bfseries\thepage}
-\fancyhead[LO]{\footnotesize\rightmark}
-\fancyhead[RE]{\footnotesize\leftmark}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0pt}
-\addtolength{\headheight}{1.5pt}
-\fancypagestyle{plain}{\fancyhead{}\cfoot{\footnotesize\bfseries\thepage}\renewcommand{\headrulewidth}{0pt}}
+% \fancyhead[LE,RO]{\footnotesize\bfseries\thepage}
+% \fancyhead[LO]{\footnotesize\rightmark}
+% \fancyhead[RE]{\footnotesize\leftmark}
+% \renewcommand{\headrulewidth}{0.5pt}
+% \renewcommand{\footrulewidth}{0pt}
+% \addtolength{\headheight}{1.5pt}
+% \fancypagestyle{plain}{\fancyhead{}\cfoot{\footnotesize\bfseries\thepage}\renewcommand{\headrulewidth}{0pt}}
+
+\fancyhead{}
+\fancyhead{}
+% Set the right side of the footer to be the page number
+\fancyfoot[R]{\thepage\ifodd\value{page}\else\hfill\fi}
+% \fancyfoot[C]{}
+% \renewcommand{\headrulewidth}{0pt}
 
 
 % interlinia
-\linespread{1.25}
+\linespread{1.5}
 
 
 % treść
@@ -297,14 +306,8 @@ narysowaną linię o zadanym kolorze i szerokości.
 Interpretacja znaków polega na zdefiniowaniu operacji dla symboli
 (nie jest konieczne dla wszystkich) w alfabecie. Czynności, podobnie 
 jak symbole, są z kolei definiowane
-przez autora systemu. Rysunek ref przedstawia przykład interpretacji
-symbolu (z kątem $\alpha$ równym 90 stopni) w następujący sposób:
-
-\begin{itemize}
-	\item[--] \crnrs{F} oznacza przejście do przodu i narysuj linię
-	\item[--] \crnrs{-} oznaca obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o mierze $\alpha^\circ$
-	\item[--] \crnrs{+} oznaca obrót zgodnie z ruchem wskazówek zegara o $\alpha^\circ$ 
-\end{itemize}
+przez autora systemu. Rysunek \ref{fig:interpret} przedstawia przykład interpretacji
+symbolu (z kątem $\alpha = 90^\circ$ ) w następujący sposób:
 
 \begin{figure}[h]
 	\begin{center}
@@ -329,57 +332,67 @@ symbolu (z kątem $\alpha$ równym 90 stopni) w następujący sposób:
 	\label{fig:interpret}
 \end{figure}
 
+\begin{itemize}
+	\item[--] \crnrs{F} oznacza przejście do przodu i narysuj linię
+	\item[--] \crnrs{-} oznaca obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o mierze $\alpha$
+	\item[--] \crnrs{+} oznaca obrót zgodnie z ruchem wskazówek zegara o $\alpha$ 
+\end{itemize}
+
+Zdefiniujemy również zbiór reguł L-systemu w tabeli \ref{tab:table4}.
+Łącząc wyże wymieniony zestaw reguł z interpretacją symboli z rysunku \ref{fig:interpret}, 
+otrzymujemy strukturę rekurencyjną zwaną krzywą smoka (tabela \ref{tab:table5}). 
+
 \begin{table}[h]
-	\caption{Przykład stworzonej struktury za pomocą L-systemu}
-	\label{tab:table3}
+	\caption{Zestaw reguł L-system  dla krzywej smoka (ang. \textit{dragon curve})}
+	\begin{center}
+		\begin{tabular}{|c|c|l|}
+			\hline
+			Alfabet & Aksjomat & Reguły \\ [0.5ex]
+			\hline
+			\{   \crnrs{F}, \crnrs{X},\crnrs{Y} \} &
+			\crnrs{FB}                            &
+			\crnrs{A} $\rightarrow$ \crnrs{FBFA+HFA+FB-FA} \\
+			& & \crnrs{B} \(\rightarrow\) \crnrs{FB+FA-FB-JFBFA} \\
+			& & \crnrs{F} \(\rightarrow\) \crnrs{} \\
+			& & \crnrs{H} \(\rightarrow\) \crnrs{-} \\
+			& & \crnrs{J} \(\rightarrow\) \crnrs{+}                                            \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\label{tab:table4}
+\end{table}
+\begin{table}[h]
+	\caption{krzywa smoka w iteracji 1-7}
+	\label{tab:table5}
 	\begin{center}
 		\begin{tabular}{|c|c|}
 			\hline
-			Generacja & Stan \\ [0.5ex]
+			Iteracji & Stan \\ [0.5ex]
 			\hline
-			1 & \includegraphics[scale=0.7]{grafika/example1} \\
+			1 & \includegraphics[scale=0.6]{grafika/example1} \\
 			\hline
-			2 & \includegraphics[scale=0.7]{grafika/example2} \\
+			2 & \includegraphics[scale=0.6]{grafika/example2} \\
 			\hline
-			3 & \includegraphics[scale=0.7]{grafika/example3} \\
+			3 & \includegraphics[scale=0.6]{grafika/example3} \\
 			\hline
-			4 & \includegraphics[scale=0.7]{grafika/example4} \\
+			4 & \includegraphics[scale=0.6]{grafika/example4} \\
 			\hline
-			5 & \includegraphics[scale=0.7]{grafika/example5} \\
+			5 & \includegraphics[scale=0.6]{grafika/example5} \\
 			\hline
-			6 & \includegraphics[scale=0.7]{grafika/example6} \\
+			6 & \includegraphics[scale=0.6]{grafika/example6} \\
 			\hline
-			7 & \includegraphics[scale=0.7]{grafika/example7} \\
+			7 & \includegraphics[scale=0.6]{grafika/example7} \\
 			\hline
 		\end{tabular}
 	\end{center}
 \end{table}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.7]{grafika/example1}
-	\caption{Wynik L-systemu}
-	\label{fig:dragoncurve}
-\end{figure}
+Widać, że po każdej iteracji struktura staje się coraz bardziej
+złożona. Wynik piętnastu iteracji pokazano na rysunku \ref{fig:dragoncurve}.
 
-
-\begin{figure}[h]
+\begin{figure}
 	\centering
-	\includegraphics[scale=0.7]{grafika/example2}
-	\caption{Wynik L-systemu}
-	\label{fig:dragoncurve}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.7]{grafika/example3}
-	\caption{Wynik L-systemu}
-	\label{fig:dragoncurve}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.7]{grafika/example10}
+	\includegraphics[scale=0.8]{grafika/example152}
 	\caption{Wynik L-systemu}
 	\label{fig:dragoncurve}
 \end{figure}
