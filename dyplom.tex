@@ -30,7 +30,7 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
-\def\crnrs#1{$\ulcorner#1\lrcorner$}
+\def\crnrs#1{$^\ulcorner#1_\lrcorner$}
 \lstset{
 	backgroundcolor=\color{backcolour},   
 	commentstyle=\color{codegreen},
@@ -293,15 +293,16 @@ lub papierze i obraca w zadanym kierunku,
 pozostawiając za sobą (lub opcjonalnie nie pozostawiając) 
 narysowaną linię o zadanym kolorze i szerokości.
 
-Interpretacja znaków polega na zdefiniowaniu operacji dla każdego symbolu
-w alfabecie. Czynności, podobnie jak symbole, są z kolei definiowane
+Interpretacja znaków polega na zdefiniowaniu operacji dla symboli
+(nie jest konieczne dla wszystkich) w alfabecie. Czynności, podobnie 
+jak symbole, są z kolei definiowane
 przez autora systemu. Rysunek ref przedstawia przykład interpretacji
-symbolu (z kątem alfa równym 90 stopni) w następujący sposób:
+symbolu (z kątem $\alpha$ równym 90 stopni) w następujący sposób:
 
 \begin{itemize}
 	\item[--] \crnrs{F} oznacza przejście do przodu i narysuj linię
-	\item[--] \crnrs{-} oznaca obrót w kierunku przeciwnym do ruchu wskazówek zegara o alfa stopni
-	\item[--] \crnrs{+} oznaca obrót zgodnie z ruchem wskazówek zegara o alfa stopni
+	\item[--] \crnrs{-} oznaca obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o mierze $\alpha^\circ$
+	\item[--] \crnrs{+} oznaca obrót zgodnie z ruchem wskazówek zegara o $\alpha^\circ$ 
 \end{itemize}
 
 \begin{figure}[h]
