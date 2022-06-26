@@ -319,7 +319,7 @@ na metaforze żółwia, wyimaginowanego
 przypominającego robota, które porusza się po ekranie 
 lub papierze i obraca w zadanym kierunku, 
 pozostawiając za sobą (lub opcjonalnie nie pozostawiając) 
-narysowaną linię o zadanym kolorze i szerokości.
+narysowaną linię o zadanym kolorze i grubości.
 
 Interpretacja znaków polega na zdefiniowaniu operacji dla symboli
 (nie jest konieczne dla wszystkich) w alfabecie. Czynności, podobnie 
@@ -417,12 +417,12 @@ złożona. Wynik piętnastu iteracji pokazano na rysunku \ref{fig:dragoncurve}.
 \end{figure}
 
 W przykładzie krzywej smoka (rysunek \ref{fig:dragoncurve}) żółw zawsze
-porusza się na tę samą odległość, a jego linie mają tę samą szerokość.
+porusza się na tę samą odległość, a jego linie mają tę samą grubość.
 Jednak w świecie rzeczywistym rośliny
 i drzewa mają zasadniczo strukturę rozgałęzioną. W strukturze fraktalnej
 roślin każda pojedyncza gałąź może być przedstawiona jako osobna roślina,
 choć w zredukowanej formie. Dlatego, aby symulować drzewa, do l-systemu 
-należy dodać parametry długości i szerokości linii utworzonej przez 
+należy dodać parametry długości i grubości linii utworzonej przez 
 żółwia. 
 
 Kolejny zestaw reguł (tabela \ref{tab:rulesTree}) zademonstruje przykład tworzenia struktury 
@@ -438,9 +438,9 @@ Ich interpretacja przez żółwia jest następująca:
 	\item[-] \crnrs{X} jest ignorowany przez żółwia
 \end{itemize}
 
-W przykładzie przedstawionym w książce szerokość linii narysowanej
+W przykładzie przedstawionym w książce grubość linii narysowanej
 przez żółwia nie zmienia się. Rozszerzyłem przykład z podręcznika
-i dodałem czynnik szerokości, przez który będzie mnożona grubość 
+i dodałem czynnik grubości, przez który będzie mnożona grubość 
 w zależności od zagnieżdżenia gałęzi. 
 
 W wyniku zastosowania wszystkich powyższych reguł powstaje 
@@ -459,8 +459,8 @@ struktura przypominająca drzewo (rysunek \ref{fig:treeExample})
 			\crnrs{X} $\rightarrow$ \crnrs{F[+X]F[-X]+X} &
 			Kąt powrotu = $20^\circ$ \\
 			& & \crnrs{F} $\rightarrow$ \crnrs{F} & 
-			Szerokość linii = 6px \\
-			& & & Czynnik szerokości = 0.5 \\
+			Grubość linii = 6px \\
+			& & & Czynnik grubości = 0.5 \\
 			\hline
 		\end{tabular}
 	\end{center}
