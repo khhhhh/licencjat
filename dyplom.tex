@@ -169,8 +169,8 @@ Na rysunku \ref{fig:lsystreeexample} jest przykład zastosowania L-systemu dla s
 fraktalnej struktury, która przypomina drzewo.
 
 
-\begin{figure}[h]
-	\centering\includegraphics[height=7cm]{L-system-fractal.svg.png}
+\begin{figure}[ht]
+	\centering\includegraphics[height=7cm]{grafika/treefirst}
 	\caption{Przykład stworzonej struktury za pomocą L-systemu}
     \label{fig:lsystreeexample}
 \end{figure}
@@ -206,7 +206,7 @@ podział komórki $(|\omega| > 1)$, lub jej modyfikację $(|\omega| = 1)$, lub
 jako jej śmierć $(|\omega| = 0)$.
 
 Na tabeli \ref{tab:table1} przedstawiono przykład L-systemu.
-\begin{table}[h]
+\begin{table}[ht]
 	\caption{Przykład stworzonej struktury za pomocą L-systemu}
 	\label{tab:table1}
 	\begin{center}
@@ -242,7 +242,7 @@ Dla ilustracji rozważmy następujący L-system
 (nazywamy go glon (łat. \textit{Algæ}), ponieważ jego rozwój
  modeluje wzrost pewnego gatunku alg) w tabeli \ref{tab:table2}:
 
-\begin{table}[h]
+\begin{table}[ht]
 	\caption{Przykład stworzonej struktury za pomocą L-systemu}
 	\label{tab:table2}
 	\begin{center}
@@ -262,8 +262,8 @@ Dla ilustracji rozważmy następujący L-system
 W tabeli \ref{tab:table3} przedstawiono stany tego L-systemu
 odpowiadające pierwszym dziesięciu cyklom rozwoju systemu.
 
-\begin{table}[h]
-	\caption{Przykład stworzonej struktury za pomocą L-systemu}
+\begin{table}[ht]
+	\caption{Wyniki l-systemu z tabeli \ref{tab:table2} od zera do ośmiu iteracji }
 	\label{tab:table3}
 	\begin{center}
 		\begin{tabular}{|c|l|}
@@ -291,6 +291,24 @@ w tych ciągach. Bardziej zaskakujący jest fakt, że ciąg ciągów ma
 taką samą prawidłowość jak ciąg liczb Fibonacciego: każdy ciąg jest sumą
 (konkatenacją) dwóch poprzednich.
 
+Aby uzyskać stan l-systemu po określonej liczbie iteracji, 
+napisałem funkcję (listing \ref{lst:lsystemfunc}), do której można wstawić aksjomat, 
+zbiór reguł l-systemu oraz liczbę iteracji. 
+Funkcja zwraca stan łańcucha po podanej liczbie iteracji.
+
+\begin{lstlisting}[language=Python, caption={Funkcja, która zwraca stan systemu po określonej liczbie iteracji}, label={lst:lsystemfunc}]
+	def iter(axiom: str, rules: dict, iterations: int) -> str:
+    if iterations == 0: return axiom
+    returnString = ''
+    for i in axiom:
+        if i in rules:
+            returnString += rules[i]
+        else:
+            returnString += i
+    return iter(returnString, rules, iterations-1)
+\end{lstlisting}
+
+
 \section{Interpretacja ciągu znaków}
 
 W celu dalszej graficznej interpretacji otrzymanych ciągów
@@ -309,7 +327,7 @@ jak symbole, są z kolei definiowane
 przez autora systemu. Rysunek \ref{fig:interpret} przedstawia przykład interpretacji
 symbolu (z kątem $\alpha = 90^\circ$ ) w następujący sposób:
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\begin{center}
 		\begin{tikzpicture}
 			\draw [ultra thick, ->] (3,0) -- (3,3);
@@ -333,16 +351,16 @@ symbolu (z kątem $\alpha = 90^\circ$ ) w następujący sposób:
 \end{figure}
 
 \begin{itemize}
-	\item[--] \crnrs{F} oznacza przejście do przodu i narysuj linię
-	\item[--] \crnrs{-} oznaca obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o mierze $\alpha$
-	\item[--] \crnrs{+} oznaca obrót zgodnie z ruchem wskazówek zegara o $\alpha$ 
+	\item[-] \crnrs{F} oznacza przejście do przodu i narysuj linię
+	\item[-] \crnrs{-} oznaca obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o mierze $\alpha$
+	\item[-] \crnrs{+} oznaca obrót zgodnie z ruchem wskazówek zegara o $\alpha$ 
 \end{itemize}
 
 Zdefiniujemy również zbiór reguł L-systemu w tabeli \ref{tab:table4}.
 Łącząc wyże wymieniony zestaw reguł z interpretacją symboli z rysunku \ref{fig:interpret}, 
 otrzymujemy strukturę rekurencyjną zwaną krzywą smoka (tabela \ref{tab:table5}). 
 
-\begin{table}[h]
+\begin{table}[ht]
 	\caption{Zestaw reguł L-system  dla krzywej smoka (ang. \textit{dragon curve})}
 	\begin{center}
 		\begin{tabular}{|c|c|l|}
@@ -361,7 +379,8 @@ otrzymujemy strukturę rekurencyjną zwaną krzywą smoka (tabela \ref{tab:table
 	\end{center}
 	\label{tab:table4}
 \end{table}
-\begin{table}[h]
+
+\begin{table}[ht]
 	\caption{krzywa smoka w iteracji 1-7}
 	\label{tab:table5}
 	\begin{center}
@@ -393,10 +412,77 @@ złożona. Wynik piętnastu iteracji pokazano na rysunku \ref{fig:dragoncurve}.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.8]{grafika/example152}
-	\caption{Wynik L-systemu}
+	\caption{Wynik piętnastu iteracji}
 	\label{fig:dragoncurve}
 \end{figure}
 
+W przykładzie krzywej smoka (rysunek \ref{fig:dragoncurve}) żółw zawsze
+porusza się na tę samą odległość, a jego linie mają tę samą szerokość.
+Jednak w świecie rzeczywistym rośliny
+i drzewa mają zasadniczo strukturę rozgałęzioną. W strukturze fraktalnej
+roślin każda pojedyncza gałąź może być przedstawiona jako osobna roślina,
+choć w zredukowanej formie. Dlatego, aby symulować drzewa, do l-systemu 
+należy dodać parametry długości i szerokości linii utworzonej przez 
+żółwia. 
+
+Kolejny zestaw reguł (tabela \ref{tab:rulesTree}) zademonstruje przykład tworzenia struktury 
+przypominającej drzewo. Przykład zaczerpnięty z książki 
+``Alogirytmiczne piękno roślin''\cite{beautyofplants} \textit{(ang. ``Alogirthmic Beauty of Plants'')}, 
+której współautorem jest sam Aristid Lindenmayer. 
+W przykładzie tego l-systemu do alfabetu wprowadzane są nowe znaki. 
+Ich interpretacja przez żółwia jest następująca:
+
+\begin{itemize}
+	\item[-] \crnrs{[} oznacza ``zapisać bieżący stan żółwia do stosu'',
+	\item[-] \crnrs{]} oznaca ``odczytać bieżący stan żółwia do stosu'',
+	\item[-] \crnrs{X} jest ignorowany przez żółwia
+\end{itemize}
+
+W przykładzie przedstawionym w książce szerokość linii narysowanej
+przez żółwia nie zmienia się. Rozszerzyłem przykład z podręcznika
+i dodałem czynnik szerokości, przez który będzie mnożona grubość 
+w zależności od zagnieżdżenia gałęzi. 
+
+W wyniku zastosowania wszystkich powyższych reguł powstaje 
+struktura przypominająca drzewo (rysunek \ref{fig:treeExample})
+
+
+\begin{table}[ht]
+	\caption{Zestaw reguł L-system dla przykładowego drzewa}
+	\begin{center}
+		\begin{tabular}{|c|c|l|l|}
+			\hline
+			Alfabet & Aksjomat & Reguły  & Konstanty \\ [0.5ex]
+			\hline
+			\{   \crnrs{F}, \crnrs{X}, \crnrs{[}, \crnrs{]} \} & 
+			\crnrs{X}                            &
+			\crnrs{X} $\rightarrow$ \crnrs{F[+X]F[-X]+X} &
+			Kąt powrotu = $20^\circ$ \\
+			& & \crnrs{F} $\rightarrow$ \crnrs{F} & 
+			Szerokość linii = 6px \\
+			& & & Czynnik szerokości = 0.5 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\label{tab:rulesTree}
+\end{table}
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.8]{grafika/treeExample}
+	\caption{Utworzona struktura na podstawie reguł z tabeli \ref{tab:rulesTree}}
+	\label{fig:treeExample}
+\end{figure}
+
+
+% Również, w przypadku zdefiniowanych reguł l-systemu w tabeli \ref{tab:table4}, 
+% zastosowanie powyższych reguł daje za każdym razem taki sam wynik.
+% Jednak w świecie rzeczywistym prawie niemożliwe jest napotkanie dwóch
+% identycznych struktur fraktalnych. Wiele czynników świata 
+% rzeczywistego ma wpływ na końcowy rezultat każdej konstrukcji. 
+% Dlatego, aby symulować prawdziwe rośliny, musimy dodać do l-systemu 
+% losowość.  
 \chapter{Implementacja} 
 
 
