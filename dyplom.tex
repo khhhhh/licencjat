@@ -125,11 +125,11 @@ następujące funkcje:
 
 \begin{itemize}
 
-\item[--] możliwość wyświetlania drzew w przestrzeni trójwymiarowej,
-\item[--] możliwość modyfikowania drzew przy użyciu różnych parametrów,
-\item[--] możliwość wyboru tekstur dla pnia drzewa i liści,
-\item[--] możliwość symulacji wzrostu drzew,
-\item[--] możliwość zapisywania i wczytywania drzew o określonych parametrach.
+\item[-] możliwość wyświetlania drzew w przestrzeni trójwymiarowej,
+\item[-] możliwość modyfikowania drzew przy użyciu różnych parametrów,
+\item[-] możliwość wyboru tekstur dla pnia drzewa i liści,
+\item[-] możliwość symulacji wzrostu drzew,
+\item[-] możliwość zapisywania i wczytywania drzew o określonych parametrach.
 
 \end{itemize}
 
@@ -186,8 +186,8 @@ L-systemy są obecnie powszechnie nazywane parametrycznymi L-systemami, definiow
 gdzie
 
 \begin{itemize}
-	\item[-] V (alfabet) -- to zbiór symboli zawierający zarówno elementy, które można zastąpić (zmienne), jak i te, których nie można zastąpić ("stałe" lub "terminale")
-	\item[-] \(\omega\) (początek, aksjomat lub inicjator) -- to ciąg symboli z V, który określa stan początkowy systemu.
+	\item[-] V (alfabet) -- to zbiór symboli zawierający zarówno elementy, które można zastąpić (zmienne), jak i te, których nie można zastąpić ("stałe" lub "terminale"),
+	\item[-] \(\omega\) (początek, aksjomat lub inicjator) -- to ciąg symboli z V, który określa stan początkowy systemu,
 	\item[-] P  -- to zbiór reguł produkcji lub produktów określających sposób zastępowania zmiennych przez kombinacje stałych i innych zmiennych. Produkcja składa się z dwóch ciągów: poprzednika i następnika. Dla każdego symbolu A, który jest członkiem zbioru V i nie występuje po lewej stronie żadnego iloczynu w P, zakłada się tożsamość iloczynu A → A; symbole te nazywamy stałymi lub terminalnymi.
 	% \item \textbf{-------------}
 	% \item[-] Alfabet jest zbiorem skończonym, a jego elementami są symbole. Natura symboli nie jest istotna, ich jedyną funkcją jest odróżnianie od siebie nawzajem. Ciąg znaków w alfabecie to skończony ciąg znaków w alfabecie. W naszych zadaniach alfabet będzie się składał z najzwyklejszych znaków, a ciągi nad alfabetem będą najzwyklejszymi ciągami.
@@ -351,9 +351,9 @@ symbolu (z kątem $\alpha = 90^\circ$ ) w następujący sposób:
 \end{figure}
 
 \begin{itemize}
-	\item[-] \crnrs{F} oznacza przejście do przodu i narysuj linię
-	\item[-] \crnrs{-} oznaca obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o mierze $\alpha$
-	\item[-] \crnrs{+} oznaca obrót zgodnie z ruchem wskazówek zegara o $\alpha$ 
+	\item[-] \crnrs{F} oznacza przejście do przodu i narysuj linię,
+	\item[-] \crnrs{-} oznaca obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o mierze $\alpha$,
+	\item[-] \crnrs{+} oznaca obrót zgodnie z ruchem wskazówek zegara o $\alpha$.
 \end{itemize}
 
 Zdefiniujemy również zbiór reguł L-systemu w tabeli \ref{tab:table4}.
@@ -435,7 +435,7 @@ Ich interpretacja przez żółwia jest następująca:
 \begin{itemize}
 	\item[-] \crnrs{[} oznacza ``zapisać bieżący stan żółwia do stosu'',
 	\item[-] \crnrs{]} oznaca ``odczytać bieżący stan żółwia do stosu'',
-	\item[-] \crnrs{X} jest ignorowany przez żółwia
+	\item[-] \crnrs{X} jest ignorowany przez żółwia.
 \end{itemize}
 
 W przykładzie przedstawionym w książce grubość linii narysowanej
@@ -520,19 +520,19 @@ dla oprogramowania.
 \subsection{Biblioteka Proctree}
 
 Proctree.js to biblioteka dla języka programowania javascript, 
-która pozwala na tworzenie drzewa jako siatki wierzchołków. 
+która pozwala na tworzenie drzewa jako siatki wierzchołków.\cite{proctreejs} 
 Biblioteka posiada dużą liczbę parametrów, które wpływają na 
 ostateczny wynik drzewa. Autorem biblioteki jest brytyjski 
 programista Paul Brunt. Później fiński programista Jari Komppa 
-zrobił port tej biblioteki dla C++. Biblioteka w wersji C++ jest szybsza.
+zrobił port tej biblioteki dla C++. Biblioteka w wersji C++ jest szybsza.\cite{proctree}
 
 Biblioteka Proctree jest głównym narzędziem do tworzenia siatki wierzchołków,
 normalnych i mapowania UV dla drzewa w programie.
 
 
-\subsection{Biblioteka nlohmann Json}
+\subsection{Biblioteka Nlohmann Json}
 
-Nlohmann Json to biblioteka do obsługi danych formatu json. 
+Nlohmann Json to biblioteka do obsługi danych formatu json. \cite{nlohmannjson}
 Biblioteka ma wiele zalet: Intuicyjna syntaktyka, Łatwa integracja,
 Wydajność pamięci, Szybkość. Autorem biblioteki jest 
 niemiecki programista Niels Lohmann.
@@ -546,15 +546,60 @@ OpenGL jest specyfikacją definiującą niezależny od
 platformy interfejs programowania aplikacji do pisania 
 aplikacji wykorzystujących grafikę komputerową 2D i 3D. 
 Twórcą jest amerykańska firma Silicon Graphics. OpenGl pozwala na tworzenie 
-złożonych scen 3D za pomocą prostych prymitywów. Wykorzystywany jest do 
+złożonych scen 3D za pomocą prostych prymitywów, wykorzystuje do tego zasoby 
+karty graficznej.  Wykorzystywany jest do 
 tworzenia gier komputerowych, wirtualnej rzeczywistości, w projektowaniu.
 
-Powstałe oprogramowanie wykorzystuje OpenGL do renderowania trójwymiarowej 
+Powstałe oprogramowanie wykorzystuje OpenGL wersji 3.3 Core do renderowania trójwymiarowej 
 przestrzeni i drzew.
 
 \section{Funkcjonalność aplikacji}
 
+Stworzone oprogramowanie posiada szereg funkcji, które pozwalają na 
+zaprojektowanie rozmieszczenia drzew w otoczeniu przy budynku. 
+
+Na rysunku \ref{fig:screenmainwindow} można zaobserwować główne okno programu. 
+Konwencjonalnie okno główne można podzielić na dwa obszary -- 
+obszar ustawień i obszar roboczy.
+
+\begin{figure}[ht]
+	\centering\includegraphics[width=15.5cm]{grafika/program/main.png}
+	\caption{Główne okno programu}
+    \label{fig:screenmainwindow}
+\end{figure}
+
+Część ustawień znajduje się po lewej i dolnej stronie okna. 
+Obszar roboczy zajmuje większość okna i znajduje się po prawej stronie okna.
+
+Obszar ustawień obejmuje:
+\begin{itemize}
+	\item[-] suwak do regulacji drzew,
+	\item[-] suwak do zmiany wieku drzewa,
+	\item[-] lista utworzonych drzew,
+	\item[-] przycisk symulacji wzrostu drzew,
+	\item[-] przycisk do zmiany tekstur,
+	\item[-] pasek menu.
+\end{itemize}
+
+Obszar roboczy to trójwymiarowa przestrzeń, która symuluje obszar 
+wokół budynku drzewa. Kamerę można przesuwać za pomocą klawiatury. 
+Klawisze w,a,s,d służą do poruszania się odpowiednio do przodu, 
+w lewo, do tyłu i w prawo. Klawisz Shift służy do zdejmowania wyżej. 
+Aby obniżyć kamerę niżej, użyj klawisza Alt. 
+Kamerę można obracać za pomocą myszy z wciśniętym lewym przyciskiem.  
+
+
 \subsection{Planowanie drzew}
+
+Aby posadzić drzewka, najpierw za pomocą myszy i klawiatury 
+ustawiamy kamerę tak, aby widoczny był obszar, w którym chcemy 
+posadzić drzewko. Następnie umieszczamy kursor w miejscu, w którym 
+chcemy posadzić drzewo i klikamy prawym przyciskiem myszy.
+
+Nie ma ograniczeń co do liczby drzew w programie, 
+ale należy pamiętać, że duża liczba drzew może wpłynąć na wydajność, 
+a w szczególności na symulację wzrostu.
+
 
 \subsection{Symulacja wzrostu}
 
@@ -569,6 +614,7 @@ przestrzeni i drzew.
 \chapter{Testy i rezultaty}
 
 \section{Wydajność}
+
 \section{Porównanie z innymi rozwiązaniami}
 
 \chapter{Podsumowanie}
