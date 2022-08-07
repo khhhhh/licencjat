@@ -703,31 +703,6 @@ Tryb jest przełączany za pomocą przycisku wyboru ``Wszystkie drzewa'' \textit
 \end{figure}
 
 
-% \begin{figure}[H]
-% 	\centering\includegraphics[width=15.5cm]{grafika/program/grow1.png}
-% 	\caption{Początek automatycznego wzrostu drzew}
-%     \label{fig:grow1}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\centering\includegraphics[width=15.5cm]{grafika/program/grow2.png}
-% 	\caption{Automatyczny wzrost drzew}
-%     \label{fig:grow2}
-% \end{figure}
-
-% \begin{figure}[H]
-% 	\centering\includegraphics[width=15.5cm]{grafika/program/grow3.png}
-% 	\caption{Automatyczny wzrost drzew}
-%     \label{fig:grow3}
-% \end{figure}
-
-
-% \begin{figure}[H]
-% 	\centering\includegraphics[width=15.5cm]{grafika/program/grow4.png}
-% 	\caption{Koniec automatycznego wzrostu drzew}
-%     \label{fig:grow4}
-% \end{figure}
-
 \begin{figure}[H]
 	\centering\includegraphics[width=15.5cm]{grafika/program/AllGrow.png}
 	\caption{Automatyczny wzrost drzew}
@@ -747,11 +722,95 @@ Podczas zmiany wzrostu można również poruszać kamerą,
 ale ponieważ proces wzrostu wymaga dość dużej wydajności, 
 kamera może poruszać się wolniej.
 
-
-
 \subsection{Ustawianie parametrów}
 
+Parametry w moim programie pozwalają na manipulowanie wyglądem. 
+W efekcie mogą powstawać różne rodzaje drzew. 
+Każdy z parametrów wpływa na określone cechy drzew. 
+W moim programie występują następujące rodzaje parametrów:
+
+\textcolor{red}{Czy warto dodawać zdjęcia 
+dla każdego parametru? Czy po prostu dodać 
+jedno zdjęcie z kilkoma drzewami o różnych parametrach?}
+
+\begin{itemize}
+\setlength\itemsep{1em}
+	\item[-] siew \textit{(ang. seed)} to parametr odpowiedzialny za generator drzewa pseudolosowego,
+	\item[-] poziomy \textit{(ang. levels)} to parametr odpowiadający za ilość rozgałęzień głównych gałęzi (które wyrastają z pnia) drzewa,
+	\item[-] stopnie drzew \textit{(ang. tree steps)} to parametr odpowiadający za ilość gałęzi drzewa (pnia),
+	\item[-] współczynnik gałęzi \textit{(ang. branch factor)} to parametr wpływający na kąt rozgałęzienia wszystkich gałęzi z wyjątkiem gałęzi głównych,
+	\item[-] tempo wznoszenia \textit{(ang. climb rate)} to parametr odpowiedzialny za długość pnia po miejscach, w których następuje rozgałęzienie,
+	\item[-] \textit{(ang. clump min)}
+	\item[-] \textit{(ang. clump max)}
+	\item[-] wysokość spadku \textit{(ang. drop amount)} to parametr wpływający na siłę ciężkości na gałęziach drzewa,
+	\item[-] tempo wzrostu \textit{(ang. grow amount)} to parametr wpływający na siłę grawitacji dla głównych gałęzi drzewa,
+	\item[-] początkowa długość gałęzi \textit{(ang. initial branch length)} to parametr odpowiedzialny za początkową długość głównych gałęzi (ponieważ kolejne gałęzie pobierają procent długości z gałęzi nadrzędnej, ma to wpływ na wszystkie gałęzie),
+	\item[-] \textit{(ang. length fall off factor)}
+	\item[-] \textit{(ang. length fall off power)}
+	\item[-] maksymalny promień \textit{(ang. max radius)} parametr określający promień drzewa (dotyczy zarówno gałęzi jak i pnia),
+	\item[-] spadek promienia \textit{(ang. radius falloff)} to parametr określający grubość gałęzi po rozgałęzieniu (gałęzie pobierają pewien procent grubości gałęzi macierzystej, parametr ten ustala ten procent),
+	\item[-] zamiatanie \textit{(ang. sweep)} to parametr, który wpływa na ogólny kierunek wszystkich gałęzi. Tworzy efekt podobny do tego, jak drzewo jest pod wpływem wiatru,
+	\item[-] stożek \textit{(ang. taper)} to parametr wpływający na stosunek grubości gałęzi na początku do końca (przy wyższych parametrach gałąź zaczyna przypominać stożek),
+	\item[-] wygięcie pnia \textit{(ang. trunk kink)} to parametr wpływający na krzywiznę pnia w miejscach, gdzie on się rozgałęzia,
+	\item[-] długość pnia \textit{(ang. trunk length)} to parametr wpływający na długość pnia (dotyczy tylko części pnia przed pierwszą gałęzią),
+	\item[-] skala gałązkowa \textit{(ang. twig scale)} to parametr, który wpływa na wielkość gałązek,
+	\item[-] skrętność \textit{(ang. twist rate)} to parametr odpowiadający za skręt pnia,
+	\item[-] mnożnik \textit{(ang. Vmultiplier)} to parametr wpływający na rozciąganie tekstury,
+	\item[-] sezon \textit{(ang. season)} to parametr, który wpływa na kolor liści drzewa.
+\end{itemize}
+
+
 \subsection{Ustawianie tekstur}
+
+Moje oprogramowanie pozwala również na zmianę tekstur. 
+Można zmienić teksturę pnia drzewa, gałęzi drzewa i fasady budynku.
+Użytkownik może wybrać tekstury, które chce zastosować. 
+
+Aby zmienić teksturę pnia i gałęzi drzewa, program odczytuje pliki 
+znajdujące się w folderze \textit{textures/} w korzeniu programu. 
+Folder \textit{textures/twigs/} zawiera tekstury gałęzi, 
+a folder \textit{textures/trees/} zawiera tekstury pnia.
+Po dodaniu tekstur do tego folderu, po uruchomieniu programu i 
+naciśnięciu przycisku wybierz teksture \textit{(ang. select texture)} 
+otwiera okno wyboru tekstury (rysunek \ref{fig:texchoosewin}), w którym 
+można wybrać teksturę gałęzi i pnia drzewa z listy wszystkich tekstur 
+znajdujących się w wyżej wymienionych folderach.
+
+\begin{figure}[H]
+	\centering\includegraphics[width=15.5cm]{grafika/program/texture2.png}
+	\caption{Okno wyboru tekstury}
+    \label{fig:texchoosewin}
+\end{figure}
+
+Po wybraniu tekstur i potwierdzeniu przyciskiem ok, 
+tekstury drzew zostają zmienione na wybrane 
+tekstury (rysunek \ref{fig:texchoosewin2}).
+
+\begin{figure}[H]
+	\centering\includegraphics[width=15.5cm]{grafika/program/texture3.png}
+	\caption{Zmienione tekstury drzewa}
+    \label{fig:texchoosewin2}
+\end{figure}
+
+Aby zmienić teksturę budynku należy wybrać w pasku menu plik 
+\textit{(ang. file)}, a następnie kliknąć na otworzyć 
+teksturę budynku \textit{(ang. open building texture)} (rysunek \ref{fig:choosebuild}).
+Następnie zostanie otwarte okno wyboru pliku systemu operacyjnego. 
+Za pomocą tego okna wybieramy plik, który ma być użyty 
+jako tekstura i naciśkamy przycisk OK. 
+Spowoduje to zmianę tekstury budynku (rysunek \ref{fig:choosebuild2}).
+
+\begin{figure}[H]
+	\centering\includegraphics[width=15.5cm]{grafika/program/texture4.png}
+	\caption{Zmiana tekstury budynku}
+    \label{fig:choosebuild}
+\end{figure}
+
+\begin{figure}[H]
+	\centering\includegraphics[width=15.5cm]{grafika/program/texture5.png}
+	\caption{Zmieniona tekstura budynku}
+    \label{fig:choosebuild2}
+\end{figure}
 
 \subsection{Zapis do pliku}
 
