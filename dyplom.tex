@@ -915,7 +915,49 @@ w oknie OpenGl.
 
 \chapter{Testy i rezultaty}
 
+Po stworzeniu, ręcznie przetestowałem stworzony program, 
+aby sprawdzić operatywność i wydajność programu. 
+Testy zostały przeprowadzone na laptopie o 
+następujących konfiguracjach:
+\begin{itemize}
+	\item[-] system operacyjny Windows 10,
+	\item[-] procesor centralny AMD Ryzen 5 5600H 3.30 Ghz,
+	\item[-] karta graficzna NVIDIA GeForce GTX 1650,
+	\item[-] pamięć główna 16 GB. 
+\end{itemize}
+
+Dzięki opracowaniu programu w środowisku QT, 
+program jest cross-platformowy i nie jest przywiązany 
+do konkretnego systemu operacyjnego, sprzętu. 
+Ponadto, aby zainstalować oprogramowanie wystarczy 
+rozpakować archiwum z oprogramowaniem w dowolnym miejscu 
+na dysku twardym. Program wykorzystuje ścieżki względne, 
+dzięki czemu może pracować z dowolnego folderu 
+na dysku twardym. 
+Testowanie programu odbywało się w trakcie tworzenia programu, 
+jak również testowania ostatecznej wersji programu. 
+Testy wszystkich funkcjonalności dały pozytywny wynik, 
+a wszystkie funkcje programu działają zgodnie z pierwotnymi 
+warunkami. W trakcie testów wykryto jednak błąd krytyczny, 
+który nie był związany z funkcjonalnością, ale z 
+działaniem programu i polegał na okresowych awariach.  
+
 \section{Wydajność}
+
+Wydajność oprogramowania jest dość mocno uzależniona 
+od używanego sprzętu. Na testowanym przeze mnie 
+urządzeniu wydajność wzrostu drzew jest bezpośrednio 
+związana z ilością umieszczonych drzew, a także ich 
+złożonością. Parametry drzewa, takie jak Levels i Tree steps, 
+mają szczególnie duży wpływ na wydajność.
+Są to jedyne parametry, które zmieniają liczbę wierzchołków i 
+krawędzi drzewa. Wszystkie inne parametry zmieniają jedynie 
+położenie wierzchołków. Każde drzewo przy Levels i Tree steps 
+ustawionych na 5 ma 2183 węzły i 6045 krawędzi. 
+Jeśli jednak ustawimy oba te parametry na 6, 
+to liczba węzłów wzrośnie do 5408 węzłów i 13806 krawendzi. 
+Dlatego im więcej poziomów ma drzewo, tym większe będzie obciążenie urządzenia 
+i wolniejsze generowanie drzewa.
 
 \section{Porównanie z innymi rozwiązaniami}
 
