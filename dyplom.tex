@@ -862,12 +862,56 @@ wpisać jego nazwę i kliknąć przycisk Zapisz.
 
 \section{Struktura programu}
 
+Struktura pozwala zademonstrować główne części programu, 
+które wchodzą ze sobą w interakcje. Na rysunku \ref{fig:classDiagram} 
+przedstawiono diagram klas utworzony w języku opisu graficznego UML. 
+Większość pól klasy prywatnej posiada settery i gettery, 
+ale dla uproszczenia nie są one pokazane na diagramie. 
+Główne klasy w programie to:
+\begin{itemize}
+	\item[-] MainWindow ta klasa jest główną klasą programu, opisuje logikę dla wszystkich komponentów okna programu, jak również wszystkie interakcje programu,
+	\item[-] OpenGlWidget to klasa opisująca logikę renderowania przestrzeni trójwymiarowej,
+	\item[-] Tree to klasa, która reprezentuje drzewa w programie. Klasa ta przechowuje logikę zmiany wzrostu drzewa, parametry, a także dwa obiekty klasy mesh - dla pnia i gałęzi drzewa oraz liści,
+	\item[-] Mesh to klasa przechowująca wszystkie dane do budowy obiektów trójwymiarowych w środowisku opengl (wierzchołki, krawędzie, normale i mapy UV).
+\end{itemize}
+
 \begin{figure}[H]
-	\centering\includegraphics[width=15.5cm]{grafika/diagrams/class2}
+	\centering\includegraphics[width=15.5cm]{grafika/diagrams/class}
 	\caption{Diagram klasy}
     \label{fig:classDiagram}
 \end{figure}
 
+W celu zademonstrowania głównej funkcji programu 
+(symulacja wzrostu drzew), wykonałem dwa diagramy: 
+\begin{itemize}
+	\item[-] diagram sekwencyjny mający na celu zademonstrowanie współdziałania obiektów klas programu (rysunek \ref{fig:sequenceDiagram}),
+	\item[-] diagram procesu w celu przedstawienia logiki wzrostu drzew (rysunek \ref{fig:flowDiagram}).
+\end{itemize}
+
+Na diagramie sekwencji widać, jak obiekt klasy 
+MainWindow otrzymuje informację o tym, 
+że użytkownik nacisnął przycisk Grow. 
+Po tym zdarzeniu obiekt mainWindow przechodzi przez 
+każdy obiekt w drzewie i na każdym z nich wywołuje 
+metodę growTree. Metoda growTree jest opisana na 
+schemacie procesu. Na końcu tej metody wywoływana 
+jest metoda generate zewnętrznej biblioteki Proctree, 
+której klasa obsługuje generowanie i zwraca obiekt Mesh.
+Obiekt Mesh jest później używany do renderowania drzewa 
+w oknie OpenGl.
+
+\begin{figure}[H]
+	\centering\includegraphics[width=15.5cm]{grafika/diagrams/sequence}
+	\caption{Diagram sekwencji}
+    \label{fig:sequenceDiagram}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering\includegraphics[height=10cm]{grafika/diagrams/flow}
+	\caption{Diagram procesu}
+    \label{fig:flowDiagram}
+\end{figure}
 
 \chapter{Testy i rezultaty}
 
