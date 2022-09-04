@@ -1,94 +1,59 @@
-\documentclass[a4paper,12pt,twoside]{book} % nie: report!
-
-
-% pakiety
-\usepackage{polski} % lepiej to zamiast babel!
-\usepackage[utf8]{inputenc} % w razie kłopotów spróbować: \usepackage[utf8x]{inputenc}
-\usepackage{fancyhdr} % nagłówki i stopki
-\usepackage{indentfirst} % WAŻNE, MA BYĆ!
-\usepackage[pdftex]{graphicx} % to do wstawiania rysunków
-\usepackage{amsmath} % to do dodatkowych symboli, przydatne
-\usepackage[inner=3.5cm,outer=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+\documentclass[a4paper,twoside,12pt]{report}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{amssymb}
 \usepackage{float}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{tabularx}
+\usepackage{picture}
+\usepackage{upgreek}
+\usepackage{listings}
+\usepackage{color}
 \usepackage{xcolor}
+\usepackage{pdfpages}
 \usepackage{booktabs,caption}
 \usepackage[flushleft]{threeparttable}
-% \usepackage[pdftex,
-%             left=1in,right=1in,
-%             top=1in,bottom=1in]{geometry} % marginsy
-\usepackage{amssymb} % to też do dodatkowych symboli, też przydatne
-\usepackage{pdfpages}
-\usepackage{lipsum}
-\usepackage{multirow}
-\usepackage{listings}
-\usepackage{caption}
-\usepackage{booktabs}
-\usepackage{subcaption}
-\usepackage{xcolor}
-\usepackage{url}
+
+\usepackage{geometry}
+
 \usepackage{tikz} 
 \usepackage{svg}
 \usepackage{lipsum}  
 % \usepackage{ tabularray}
 \usepackage{vcell}
-
 \graphicspath{ {./grafika/} }
-\DeclareCaptionType{code}[Listing][Spis listingów] 
-
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-\def\crnrs#1{$^\ulcorner#1_\lrcorner$}
-% \def\cntr#1{\begin{tabular}[c]{@{}c@{}}#1\\\end{tabular}}
-\lstset{
-	backgroundcolor=\color{backcolour},   
-	commentstyle=\color{codegreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{codegray},
-	stringstyle=\color{codepurple},
-	basicstyle=\ttfamily\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=true,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=left,                    
-	numbersep=5pt,                  
-	showspaces=false,                
-	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2,
-	float=h
-}
-
-% definicje nagłówków i stopek
-\pagestyle{fancy}
-% \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-% \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
-\fancyhf{}
-% \fancyhead[LE,RO]{\footnotesize\bfseries\thepage}
-% \fancyhead[LO]{\footnotesize\rightmark}
-% \fancyhead[RE]{\footnotesize\leftmark}
-% \renewcommand{\headrulewidth}{0.5pt}
-% \renewcommand{\footrulewidth}{0pt}
-% \addtolength{\headheight}{1.5pt}
-% \fancypagestyle{plain}{\fancyhead{}\cfoot{\footnotesize\bfseries\thepage}\renewcommand{\headrulewidth}{0pt}}
-
-\fancyhead{}
-\fancyhead{}
-% Set the right side of the footer to be the page number
-\fancyfoot[R]{\thepage\ifodd\value{page}\else\hfill\fi}
-% \fancyfoot[C]{}
-% \renewcommand{\headrulewidth}{0pt}
-
-
-% interlinia
+\geometry{lmargin=3.5cm, rmargin=2.0cm, tmargin=2.5cm, bmargin=3.5cm}
 \linespread{1.5}
 
+\definecolor{lstbackground}{rgb}{0.95, 0.95, 0.95}
+\lstset{
+  backgroundcolor = \color{lstbackground},
+  frame             	= single,
+  keywordstyle=\color{blue},  
+  basicstyle        	= \linespread{1}\ttfamily,
+  columns           	= fullflexible,
+  keepspaces=true,
+  showstringspaces  = false,
+  commentstyle      	= \color{gray}\upshape,
+  numbers           	= left,
+  numbersep         	= 5pt,
+  stepnumber        	= 1,
+  captionpos        	= t,
+  numberstyle      	= \tiny,
+}
+
+\def\crnrs#1{$^\ulcorner#1_\lrcorner$}
 
 % treść
 \begin{document}
+
 \sloppy
 \thispagestyle{empty}
 \includepdf{stronatytulowa}
@@ -149,7 +114,7 @@ następujące funkcje:
 
 \section{Informacje wstępne}
 
-\textbf{Systemy Lindenmayera (L-Systemy)} zostały wprowadzone i rozwinięte w 1968 roku
+Systemy Lindenmayera (L-Systemy) zostały wprowadzone i rozwinięte w 1968 roku
  przez Aristida Lindenmayera \cite{modelingOfPlants},
 węgierskiego biologa teoretycznego i botanika z~Uniwersytetu w Utrechcie.
 Lindenmayer wykorzystał L-systemy do opisu zachowania komórek roślinnych i
@@ -204,12 +169,13 @@ Na tabeli \ref{tab:table1} przedstawiono przykład L-systemu.
 	\begin{center}
 		\begin{tabular}{|c|c|l|}
 			\hline
-			Alfabet & Aksjomat & Reguły \\ [0.5ex]
+			Alfabet & Aksjomat & 
+			\multicolumn{1}{c|}{Reguły} \\ [0.5ex]
 			\hline
 			\{ \crnrs{A}, \crnrs{B}, \crnrs{F}, \crnrs{H},\crnrs{J},\crnrs{+}, \crnrs{-} \} &
 			\crnrs{FB}                            &
-			\crnrs{A} $\rightarrow$ \crnrs{FBFA+HFA+FB-FA} \\
-			& & \crnrs{B} \(\rightarrow\) \crnrs{FB+FA-FB-JFBFA} \\
+			\crnrs{A} $\rightarrow$ \crnrs{FBFA+FB-FA} \\
+			& & \crnrs{B} \(\rightarrow\) \crnrs{FB+FA-FB-J} \\
 			& & \crnrs{F} \(\rightarrow\) \crnrs{} \\
 			& & \crnrs{H} \(\rightarrow\) \crnrs{-} \\
 			& & \crnrs{J} \(\rightarrow\) \crnrs{+}                                            \\
@@ -289,15 +255,15 @@ zbiór reguł L-systemu oraz liczbę iteracji.
 Funkcja zwraca stan łańcucha po podanej liczbie iteracji.
 
 \begin{lstlisting}[language=Python, caption={Funkcja, która zwraca stan systemu po określonej liczbie iteracji}, label={lst:lsystemfunc}]
-	def iter(axiom: str, rules: dict, iterations: int) -> str:
-    if iterations == 0: return axiom
-    returnString = ''
-    for i in axiom:
-        if i in rules:
-            returnString += rules[i]
-        else:
-            returnString += i
-    return iter(returnString, rules, iterations-1)
+def iter(axiom: str, rules: dict, iterations: int) -> str:
+	if iterations == 0: return axiom
+	returnString = ''
+	for i in axiom:
+		if i in rules:
+			returnString += rules[i]
+		else:
+			returnString += i
+	return iter(returnString, rules, iterations-1)
 \end{lstlisting}
 
 
@@ -323,6 +289,12 @@ jak symbole, są z kolei definiowane
 przez autora systemu. Rysunek \ref{fig:interpret} przedstawia przykład interpretacji
 symbolu (z kątem $\alpha = 90^\circ$ ) w następujący sposób:
 
+\begin{itemize}
+	\item[-] \crnrs{F} oznacza przejście do przodu i narysuj linię,
+	\item[-] \crnrs{-} oznacza obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o mierze $\alpha$,
+	\item[-] \crnrs{+} oznacza obrót zgodnie z ruchem wskazówek zegara o $\alpha$.
+\end{itemize}
+
 \begin{figure}[H]
 	\begin{center}
 		\begin{tikzpicture}
@@ -346,22 +318,21 @@ symbolu (z kątem $\alpha = 90^\circ$ ) w następujący sposób:
 	\label{fig:interpret}
 \end{figure}
 
-\begin{itemize}
-	\item[-] \crnrs{F} oznacza przejście do przodu i narysuj linię,
-	\item[-] \crnrs{-} oznacza obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o mierze $\alpha$,
-	\item[-] \crnrs{+} oznacza obrót zgodnie z ruchem wskazówek zegara o $\alpha$.
-\end{itemize}
 
 Zdefiniujemy również zbiór reguł L-systemu w tabeli \ref{tab:table4}.
-Łącząc wyże wymieniony zestaw reguł z interpretacją symboli z rysunku \ref{fig:interpret}, 
+Łącząc zestaw reguł z interpretacją symboli z rysunku \ref{fig:interpret}, 
 otrzymujemy strukturę rekurencyjną zwaną krzywą smoka (tabela \ref{tab:table5}). 
+
+Widać, że po każdej iteracji struktura staje się coraz bardziej
+złożona. Wynik piętnastu iteracji pokazano na rysunku \ref{fig:dragoncurve}.
 
 \begin{table}[H]
 	\caption{Zestaw reguł L-system dla krzywej smoka (ang. \textit{dragon curve})}
 	\begin{center}
 		\begin{tabular}{|c|c|l|}
 			\hline
-			Alfabet & Aksjomat & Reguły \\ [0.5ex]
+			Alfabet & Aksjomat & 
+			\multicolumn{1}{c|}{Reguły} \\ [0.5ex]
 			\hline
 			\{   \crnrs{F}, \crnrs{X},\crnrs{Y} \} &
 			\crnrs{FB}                            &
@@ -375,26 +346,6 @@ otrzymujemy strukturę rekurencyjną zwaną krzywą smoka (tabela \ref{tab:table
 	\end{center}
 	\label{tab:table4}
 \end{table}
-
-% \begin{tblr}{
-% 	colspec = {X[c]X[c,h]},
-% 	stretch = 1,
-% 	rowsep = 5pt,
-% 	hlines = {black, 1pt},
-% 	vlines = {black, 1pt}
-%   }
-% 	\caption{krzywa smoka w iteracji 1-7}
-% 	\label{tab:table5}
-% 	Iteracji & Stan \\ 
-% 	1 & \includegraphics[scale=0.6]{grafika/example1} \\
-% 	2 & \includegraphics[scale=0.6]{grafika/example2} \\
-% 	3 & \includegraphics[scale=0.6]{grafika/example3} \\
-% 	4 & \includegraphics[scale=0.6]{grafika/example4} \\
-% 	5 & \includegraphics[scale=0.6]{grafika/example5} \\
-% 	6 & \includegraphics[scale=0.6]{grafika/example6} \\
-% 	7 & \includegraphics[scale=0.6]{grafika/example7} \\
-% \end{tblr}
-
 
 \begin{table}[H]
 	\caption{Krzywa smoka w iteracji 1-7}
@@ -421,9 +372,6 @@ otrzymujemy strukturę rekurencyjną zwaną krzywą smoka (tabela \ref{tab:table
 		\end{tabular}
 \end{table}
 
-Widać, że po każdej iteracji struktura staje się coraz bardziej
-złożona. Wynik piętnastu iteracji pokazano na rysunku \ref{fig:dragoncurve}.
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{grafika/example152}
@@ -446,6 +394,7 @@ W przykładzie tego L-systemu do alfabetu wprowadzane są nowe znaki.
 Ich interpretacja przez żółwia jest następująca:
 
 \begin{itemize}
+	\setlength\itemsep{1em}
 	\item[-] \crnrs{[} oznacza ``zapisać bieżący stan żółwia do stosu'',
 	\item[-] \crnrs{]} oznacza ``odczytać bieżący stan żółwia do stosu'',
 	\item[-] \crnrs{X} jest ignorowany przez żółwia.
@@ -465,7 +414,9 @@ struktura przypominająca drzewo (rysunek \ref{fig:treeExample})
 	\begin{center}
 		\begin{tabular}{|c|c|l|l|}
 			\hline
-			Alfabet & Aksjomat & Reguły  & Konstanty \\ [0.5ex]
+			Alfabet & Aksjomat & 
+			\multicolumn{1}{c|}{Reguły} &
+			\multicolumn{1}{c|}{Konstanty} \\ [0.5ex]
 			\hline
 			\{   \crnrs{F}, \crnrs{X}, \crnrs{[}, \crnrs{]} \} & 
 			\crnrs{X}                            &
@@ -712,10 +663,6 @@ Tryb jest przełączany za pomocą przycisku wyboru ``Wszystkie drzewa'' \textit
     \label{fig:growAll}
 \end{figure}
 
-\textcolor{red}{Nie wiem czy 
-lepiej robić każdy rysunek z \ref{fig:growAll} osobno, 
-czy w jednym. Chyba tak jak jest (w jednym) będzie lepiej}
-
 Liczba drzew wpływa na to, jak szybko będą generowane. 
 Dzieje się tak dlatego, że każde drzewo jest generowane inaczej, 
 biorąc pod uwagę to, jak będzie wyglądało pod koniec wzrostu.
@@ -743,13 +690,11 @@ jedno zdjęcie z kilkoma drzewami o różnych parametrach?}
 	\item[-] stopnie drzew \textit{(ang. tree steps)} to parametr odpowiadający za ilość gałęzi drzewa (pnia),
 	\item[-] współczynnik gałęzi \textit{(ang. branch factor)} to parametr wpływający na kąt rozgałęzienia wszystkich gałęzi z wyjątkiem gałęzi głównych,
 	\item[-] tempo wznoszenia \textit{(ang. climb rate)} to parametr odpowiedzialny za długość pnia po miejscach, w których następuje rozgałęzienie,
-	\item[-] \textit{(ang. clump min)}
-	\item[-] \textit{(ang. clump max)}
+	\item[-] kępa minimalna \textit{(ang. clump min)} i kępa maksymalna \textit{(ang. clump max)} to parametry związane wpływające na rozprzestrzenianie się wzrostu gałęzi drzew,
 	\item[-] wysokość spadku \textit{(ang. drop amount)} to parametr wpływający na siłę ciężkości na gałęziach drzewa,
 	\item[-] tempo wzrostu \textit{(ang. grow amount)} to parametr wpływający na siłę grawitacji dla głównych gałęzi drzewa,
 	\item[-] początkowa długość gałęzi \textit{(ang. initial branch length)} to parametr odpowiedzialny za początkową długość głównych gałęzi (ponieważ kolejne gałęzie pobierają procent długości z gałęzi nadrzędnej, ma to wpływ na wszystkie gałęzie),
-	\item[-] \textit{(ang. length fall off factor)}
-	\item[-] \textit{(ang. length fall off power)}
+	\item[-] współczynnik odpadu długości \textit{(ang. length fall off factor)} i moc odpadu długości \textit{(ang. length fall off power)} to parametry związane wpływające na długość wszystkich gałęzi,
 	\item[-] maksymalny promień \textit{(ang. max radius)} parametr określający promień drzewa (dotyczy zarówno gałęzi jak i pnia),
 	\item[-] spadek promienia \textit{(ang. radius falloff)} to parametr określający grubość gałęzi po rozgałęzieniu (gałęzie pobierają pewien procent grubości gałęzi macierzystej, parametr ten ustala ten procent),
 	\item[-] zamiatanie \textit{(ang. sweep)} to parametr, który wpływa na ogólny kierunek wszystkich gałęzi. Tworzy efekt podobny do tego, jak drzewo jest pod wpływem wiatru,
@@ -940,11 +885,20 @@ na dysku twardym.
 
 Testowanie programu odbywało się w trakcie tworzenia programu, 
 jak również testowania ostatecznej wersji programu. 
+
 Testy wszystkich funkcjonalności dały pozytywny wynik, 
 a wszystkie funkcje programu działają zgodnie z pierwotnymi 
-warunkami. W trakcie testów wykryto jednak błąd krytyczny, 
+warunkami. 
+
+Jednakże, w trakcie testów wydajności wykryto błąd krytyczny, 
 który nie był związany z funkcjonalnością, ale z 
 działaniem programu i polegał na okresowych awariach.  
+Tryb debugowania został wykorzystany do próby odkrycia 
+przyczyny problemu niespodziewanych awarii programu. 
+Okazało się, że błąd objawiał się czasem w momencie, 
+gdy OpenGl tworzy i inicjalizuje siatkę buforową. 
+Nie było jednak wystarczających informacji o przyczynie awarii, 
+aby naprawić problem. 
 
 \section{Wydajność}
 
@@ -969,9 +923,9 @@ Istnieje jeszcze kilka innych rozwiązań, które generują
 trójwymiarowe drzewa. Oto następujące programy o podobnej 
 funkcjonalności do mojego rozwiązania:
 \begin{itemize}
-	\item Snappytree \cite{snappyTree},
-	\item PD: Tree Generator \cite{PDTree},
-	\item HappyTree \cite{proctree}. 
+	\item[-] Snappytree \cite{snappyTree},
+	\item[-] PD: Tree Generator \cite{PDTree},
+	\item[-] HappyTree \cite{proctree}. 
 \end{itemize}
 Snappy tree i PD: Tree Genrator używa biblioteki proctree.js 
 jako podstawy, podczas gdy Happy Tree używa portu biblioteki proctree, 
@@ -988,21 +942,39 @@ Przykład obecności lub braku danej cechy przedstawiono w tabeli \ref{tab:compa
 	\setlength\tabcolsep{2pt}
 	\centering
 	\begin{center}
-		\begin{tabular}{|p{4cm}|c|c|c|c| }
+		\begin{tabular}{|p{4.4cm}|c|c|c|c|}
 			\hline
 			& Moje rozwiązanie & PD: Tree Generator & Snappy Tree & Happy Tree \\ [0.5ex]
 			\hline
-			Ustawienie parametrów generacji drzewa & Tak & Tak & Tak & Tak \\ [0.5ex]
+			\begin{tabular}[p{4.4cm}]{@{}p{4.4cm}@{}}
+				Ustawienie parametrów generacji drzewa
+			\end{tabular}
+			& Tak & Tak & Tak & Tak \\ [0.5ex]
 			\hline
-			Zapis parametrów do pliku JSON & Tak & Tak & Tak & Nie \\ [0.5ex]
+			\begin{tabular}[p{4.4cm}]{@{}p{4.4cm}@{}}
+				Zapis parametrów do pliku JSON
+			\end{tabular}
+			 & Tak & Tak & Tak & Nie \\ [0.5ex]
 			\hline
-			Obsługa wielu drzew & Tak & Nie & Nie & Tak$^1$ \\ [0.5ex]
+			\begin{tabular}[p{4.4cm}]{@{}p{4.4cm}@{}}
+				Obsługa wielu drzew
+			\end{tabular}
+			 & Tak & Nie & Nie & Tak$^1$ \\ [0.5ex]
 			\hline
-			Ładowanie tekstur niestandardowych & Tak & Nie & Nie & Nie \\ [0.5ex]
+			\begin{tabular}[p{4.4cm}]{@{}p{4.4cm}@{}}
+				Ładowanie tekstur niestandardowych
+			\end{tabular}
+			& Tak & Nie & Nie & Nie \\ [0.5ex]
 			\hline
-			Zapis modelu do pliku OBJ & Nie & Tak & Tak & Tak \\ [0.5ex]
+			\begin{tabular}[p{4.4cm}]{@{}p{4.4cm}@{}}
+				Zapis modelu do pliku OBJ
+			\end{tabular}
+			 & Nie & Tak & Tak & Tak \\ [0.5ex]
 			\hline
-			Ustawienie oświetlenia & Nie & Tak & Nie & Nie \\ [0.5ex]
+			\begin{tabular}[p{4.4cm}]{@{}p{4.4cm}@{}}
+				Ustawienie oświetlenia 
+			\end{tabular}
+			& Nie & Tak & Nie & Nie \\ [0.5ex]
 			\hline
 		\end{tabular}
 		\begin{tablenotes}
@@ -1012,8 +984,38 @@ Przykład obecności lub braku danej cechy przedstawiono w tabeli \ref{tab:compa
 	\end{center}
 \end{table}
 
-\chapter{Podsumowanie}
+Wiele z alternatywnych rozwiązań zapewnia funkcjonalność, która 
+nie została zaimplementowana w moim rozwiązaniu. Jednak 
+moje rozwiązanie dostarcza wąsko ukierunkowaną funkcjonalność, 
+która została przygotowana we współpracy z pracownikami 
+Instytutu Nauk Biologicznych 
+Uniwersytetu Marii Curie Skłodowskiej w~Lublinie.
 
+\chapter*{Podsumowanie}
+
+Celem niniejszej pracy było opracowanie oraz 
+zastosowane systemu Lindenmaera w symulacji
+wzrostu roślin.
+
+System Lindenmaera jest zbiorem reguł, które pozwalają na 
+zdefiniowanie generacji struktur fraktalnych. Pomimo 
+swojej prostoty L-system posiada cechy rozszerzalności, 
+dzięki czemu możliwe jest opisywanie złożonych struktur, 
+w tym roślin świata rzeczywistego.
+
+Na wstępie przedstawiono szczegóły dotyczące systemu Lindenmeyera, 
+przykłady zastosowania i wyniki w przestrzeni dwuwymiarowej oraz 
+opis tworzenia drzew w przestrzeni trójwymiarowej. 
+Następnie przedstawiono implementację oprogramowania 
+pozwalającego na projektowanie lokalizacji drzew, 
+możliwość ich parametryzacji oraz symulację zmian w czasie.
+Ostatnim krokiem było przetestowanie stworzonego oprogramowania 
+i porównanie go z innymi podobnymi rozwiązaniami.
+
+Wadą przedstawionego rozwiązania jest niestabilność programu, 
+która objawia się zatrzymaniem programu. 
+Ten problem nie został rozwiązany.
+Nie ma też symulacji oświetlenia, co mogłoby być dobrym dodatkiem.
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography/bib}
