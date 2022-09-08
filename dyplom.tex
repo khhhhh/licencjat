@@ -2,6 +2,7 @@
 \usepackage{polski}
 \usepackage[T1]{fontenc}
 \usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{enumitem}
 \usepackage[utf8]{inputenc}
 \usepackage{latexsym}
 \usepackage{hyperref}
@@ -121,7 +122,7 @@ Lindenmayer wykorzystał L-systemy do opisu zachowania komórek roślinnych i
 modelowania procesów wzrostu w rozwoju roślin.
 
 Reguły L-systemu reprezentują rekurencję.
-Prowadzi to do samopodobieństwa, a więc formy fraktalne można łatwo opisać za pomocą L-Systemu.
+Prowadzi to do samopodobieństwa, a~więc formy fraktalne można łatwo opisać za pomocą L-Systemu.
 Modele roślin, komórek i innych form organicznych naturalnie występujących gatunków można łatwo zdefiniować za pomocą L-systemu,
 ponieważ wraz ze wzrostem poziomu rekurencji forma powoli "rośnie" i staje się coraz bardziej złożona.
 Systemy Lindenmayera są również popularne w symulowaniu sztucznego życia \cite{neuralStructures}.
@@ -149,7 +150,7 @@ gdzie
 \begin{itemize}
 	\item[-] V (alfabet) -- to zbiór symboli zawierający zarówno elementy, które można zastąpić (zmienne), jak i te, których nie można zastąpić ("stałe" lub "terminale"),
 	\item[-] \(\omega\) (początek, aksjomat lub inicjator) -- to ciąg symboli z V, który określa stan początkowy systemu,
-	\item[-] P  -- to zbiór reguł produkcji lub produktów określających sposób zastępowania zmiennych przez kombinacje stałych i innych zmiennych. Produkcja składa się z dwóch ciągów: poprzednika i następnika. Dla każdego symbolu A, który jest członkiem zbioru V i nie występuje po lewej stronie żadnego iloczynu w P, zakłada się tożsamość iloczynu A → A; symbole te nazywamy stałymi lub terminalnymi.
+	\item[-] P  -- to zbiór reguł produkcji lub produktów określających sposób zastępowania zmiennych przez kombinacje stałych i innych zmiennych. Produkcja składa się z dwóch ciągów: poprzednika i następnika. Dla każdego symbolu A, który jest członkiem zbioru V i~nie występuje po lewej stronie żadnego iloczynu w P, zakłada się tożsamość iloczynu A → A; symbole te nazywamy stałymi lub terminalnymi.
 \end{itemize}
 
 W standardowej wersji L-systemów reguły wnioskowania są następujące:
@@ -291,7 +292,7 @@ symbolu (z kątem $\alpha = 90^\circ$ ) w następujący sposób:
 
 \begin{itemize}
 	\item[-] \crnrs{F} oznacza przejście do przodu i narysuj linię,
-	\item[-] \crnrs{-} oznacza obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o mierze $\alpha$,
+	\item[-] \crnrs{-} oznacza obrót w kierunku przeciwnym do ruchu wskazówek zegara na kąt o~mierze $\alpha$,
 	\item[-] \crnrs{+} oznacza obrót zgodnie z ruchem wskazówek zegara o $\alpha$.
 \end{itemize}
 
@@ -347,6 +348,7 @@ złożona. Wynik piętnastu iteracji pokazano na rysunku \ref{fig:dragoncurve}.
 	\label{tab:table4}
 \end{table}
 
+
 \begin{table}[H]
 	\caption{Krzywa smoka w iteracji 1-7}
 	\label{tab:table5}
@@ -382,7 +384,7 @@ złożona. Wynik piętnastu iteracji pokazano na rysunku \ref{fig:dragoncurve}.
 W przykładzie krzywej smoka (rysunek \ref{fig:dragoncurve}) żółw zawsze
 porusza się o tę samą odległość, a jego linie mają tę samą grubość.
 Jednak w świecie rzeczywistym rośliny
-i drzewa mają zasadniczo strukturę rozgałęzioną. W strukturze fraktalnej
+i~drzewa mają zasadniczo strukturę rozgałęzioną. W strukturze fraktalnej
 roślin każda pojedyncza gałąź może być przedstawiona jako osobna roślina,
 choć w zredukowanej formie. Dlatego, aby symulować drzewa, do L-systemu 
 należy dodać parametry długości i grubości linii utworzonej przez 
@@ -390,7 +392,7 @@ należy dodać parametry długości i grubości linii utworzonej przez
 
 Kolejny zestaw reguł (tabela \ref{tab:rulesTree}) demonstruje przykład tworzenia struktury 
 przypominającej drzewo \cite{beautyofplants}.
-W przykładzie tego L-systemu do alfabetu wprowadzane są nowe znaki. 
+W przykładzie tego L-systemu do alfabetu wprowadzane są~nowe znaki. 
 Ich interpretacja przez żółwia jest następująca:
 
 \begin{itemize}
@@ -457,7 +459,7 @@ a także możliwość ustawienia kąta obrotu. Dzięki temu żółw może porusz
 wszystkich możliwych kierunkach. Podczas budowania drzewa, w momencie gdy gałąź 
 się rozgałęzia, należy, podobnie jak w przypadku 2D, ustawić kąty dla każdej z 
 nowych gałęzi. Lindenmayer sugeruje użycie trzech wektorów 
-do reprezentowania kierunku żółwia (przód, lewo i góra) \cite{beautyofplants}.
+do reprezentowania kierunku żółwia (przód, lewo i~góra) \cite{beautyofplants}.
 
 W tym przypadku obroty żółwia będą reprezentowane przez 
 następujące równanie:
@@ -474,7 +476,7 @@ gdzie
 	\item[-] F jest wektorem wskazującym przód żółwia,
 	\item[-] R jest macierzą trójwymiarową.
 \end{itemize}
- Macierz R, w zależności od osi obrotu, 
+Macierz R, w zależności od osi obrotu, 
 może wyglądać w następujący sposób:
 
 \begin{gather}
@@ -483,7 +485,7 @@ może wyglądać w następujący sposób:
 		1 & 0 & 0 \\
 		0 & \cos{\alpha} & -\sin{\alpha}   \\
 		0 & \sin{\alpha} & \cos{\alpha}  
-	\end{bmatrix}
+	\end{bmatrix},
 \end{gather}
 
 \begin{gather}
@@ -492,7 +494,7 @@ może wyglądać w następujący sposób:
 		\cos{\alpha} & 0 & -\sin{\alpha}   \\
 		0 & 1 & 0 \\
 		\sin{\alpha} & 0 &  \cos{\alpha}
-	\end{bmatrix}
+	\end{bmatrix},
 \end{gather}
 
 \begin{gather}
@@ -501,7 +503,7 @@ może wyglądać w następujący sposób:
 		\cos{\alpha} & \sin{\alpha} & 0   \\
 		-\sin{\alpha} & \cos{\alpha} &  0 \\
 		0 & 0 & 1
-	\end{bmatrix}
+	\end{bmatrix}.
 \end{gather}
 
 
@@ -525,8 +527,8 @@ Stworzone oprogramowanie wykorzystuje język C++ dla całej logiki aplikacji.
 
 \subsection{Biblioteka Proctree}
 
-Proctree.js to biblioteka dla języka programowania javascript, 
-która pozwala na tworzenie drzewa jako siatki wierzchołków \cite{proctreejs}.
+Proctree.js to biblioteka dla języka programowania JavaScript, 
+która pozwala na~tworzenie drzewa jako siatki wierzchołków \cite{proctreejs}.
 Biblioteka posiada dużą liczbę parametrów, które wpływają na 
 ostateczny wynik drzewa. Autorem biblioteki jest brytyjski 
 programista Paul Brunt. Później fiński programista Jari Komppa 
@@ -538,13 +540,13 @@ normalnych i mapowania UV dla drzewa w programie.
 
 \subsection{Biblioteka Nlohmann JSON}
 
-Nlohmann Json to biblioteka do obsługi danych formatu json \cite{nlohmannjson}.
-Biblioteka ma wiele zalet: Intuicyjna syntaktyka, Łatwa integracja,
-Wydajność pamięci, Szybkość. Autorem biblioteki jest 
+Nlohmann JSON to biblioteka do obsługi danych formatu JSON \cite{nlohmannjson}.
+Biblioteka ma wiele zalet: intuicyjna syntaktyka, łatwa integracja,
+wydajność pamięci, szybkość. Autorem biblioteki jest 
 niemiecki programista Niels Lohmann.
 
-Biblioteka Nlohmann Json jest używana w programie do zapisywania i 
-ładowania parametrów drzewa w postaci pliku json.
+Biblioteka Nlohmann JSON jest używana w programie do zapisywania i 
+ładowania parametrów drzewa w postaci pliku JSON.
 
 \subsection{OpenGL}
 
@@ -554,10 +556,10 @@ aplikacji wykorzystujących grafikę komputerową 2D i 3D.
 Twórcą jest amerykańska firma Silicon Graphics. OpenGL pozwala na tworzenie 
 złożonych scen 3D za pomocą prymitywów. Wykorzystuje do tego zasoby 
 karty graficznej. Wykorzystywany jest do 
-tworzenia gier komputerowych, wirtualnej rzeczywistości, w projektowaniu.
+tworzenia gier komputerowych, wirtualnej rzeczywistości.
 
-Powstałe oprogramowanie wykorzystuje OpenGL wersji 3.3 Core do renderowania trójwymiarowej 
-przestrzeni i drzew.
+Powstałe oprogramowanie wykorzystuje OpenGL do renderowania trójwymiarowej 
+przestrzeni i drzew. Zostało przetestowane w wersji OpenGL 3.3.
 
 \section{Funkcjonalność aplikacji}
 
@@ -572,7 +574,7 @@ Część ustawień znajduje się po lewej i dolnej stronie okna.
 Obszar roboczy zajmuje większość okna i znajduje się po prawej stronie okna.
 
 Obszar ustawień obejmuje:
-\begin{enumerate}
+\begin{enumerate}[label=\arabic*)]
 	\item suwak do regulacji drzew,
 	\item suwak do zmiany wieku drzewa,
 	\item lista utworzonych drzew,
@@ -595,7 +597,7 @@ Aby obniżyć kamerę niżej, użyj klawisza Z.
 Kamerę można obracać za pomocą myszy z wciśniętym lewym przyciskiem.  
 
 
-\subsection{Planowanie drzew}
+\subsection{Planowanie rozmieszczenia drzew}
 
 Aby posadzić drzewa, najpierw za pomocą myszy i klawiatury 
 ustawiamy kamerę tak, aby widoczny był obszar, w którym chcemy 
@@ -664,7 +666,7 @@ Tryb jest przełączany za pomocą przycisku wyboru ``Wszystkie drzewa'' \textit
 \end{figure}
 
 Liczba drzew wpływa na to, jak szybko będą generowane. 
-Dzieje się tak dlatego, że każde drzewo jest generowane inaczej, 
+Dzieje się tak dlatego, że~każde drzewo jest generowane inaczej, 
 biorąc pod uwagę to, jak będzie wyglądało pod koniec wzrostu.
 Nie udało mi się tego zoptymalizować.
 
@@ -679,34 +681,72 @@ W efekcie mogą powstawać różne rodzaje drzew.
 Każdy z parametrów wpływa na określone cechy drzew. 
 W moim programie występują następujące rodzaje parametrów:
 
-\textcolor{red}{Czy warto dodawać zdjęcia 
-dla każdego parametru? Czy po prostu dodać 
-jedno zdjęcie z kilkoma drzewami o różnych parametrach?}
-
 \begin{itemize}
 \setlength\itemsep{1em}
-	\item[-] siew \textit{(ang. seed)} to parametr odpowiedzialny za generator drzewa pseudolosowego,
-	\item[-] poziomy \textit{(ang. levels)} to parametr odpowiadający za ilość rozgałęzień głównych gałęzi (które wyrastają z pnia) drzewa,
-	\item[-] stopnie drzew \textit{(ang. tree steps)} to parametr odpowiadający za ilość gałęzi drzewa (pnia),
+	\item[-] ziarno \textit{(ang. seed)} to parametr odpowiedzialny za generator drzewa pseudolosowego,
+	\item[-] poziomy \textit{(ang. levels)} to parametr odpowiadający za liczbę rozgałęzień głównych gałęzi (które wyrastają z pnia) drzewa (rysunek \ref{fig:levels}),
+	\item[-] stopnie drzew \textit{(ang. tree steps)} to parametr odpowiadający za liczbę gałęzi drzewa (pnia) (rysunek \ref{fig:treeSteps}),
 	\item[-] współczynnik gałęzi \textit{(ang. branch factor)} to parametr wpływający na kąt rozgałęzienia wszystkich gałęzi z wyjątkiem gałęzi głównych,
-	\item[-] tempo wznoszenia \textit{(ang. climb rate)} to parametr odpowiedzialny za długość pnia po miejscach, w których następuje rozgałęzienie,
+	\item[-] tempo wznoszenia \textit{(ang. climb rate)} to parametr odpowiedzialny za długość pnia po miejscach, w których następuje rozgałęzienie (rysunek \ref{fig:climbRate}),
 	\item[-] kępa minimalna \textit{(ang. clump min)} i kępa maksymalna \textit{(ang. clump max)} to parametry związane wpływające na rozprzestrzenianie się wzrostu gałęzi drzew,
-	\item[-] wysokość spadku \textit{(ang. drop amount)} to parametr wpływający na siłę ciężkości na gałęziach drzewa,
+	\item[-] wartość opadania \textit{(ang. drop amount)} to parametr wpływający na siłę ciężkości na gałęziach drzewa (rysunek \ref{fig:dropAmount}),
 	\item[-] tempo wzrostu \textit{(ang. grow amount)} to parametr wpływający na siłę grawitacji dla głównych gałęzi drzewa,
-	\item[-] początkowa długość gałęzi \textit{(ang. initial branch length)} to parametr odpowiedzialny za początkową długość głównych gałęzi (ponieważ kolejne gałęzie pobierają procent długości z gałęzi nadrzędnej, ma to wpływ na wszystkie gałęzie),
-	\item[-] współczynnik odpadu długości \textit{(ang. length fall off factor)} i moc odpadu długości \textit{(ang. length fall off power)} to parametry związane wpływające na długość wszystkich gałęzi,
+	\item[-] początkowa długość gałęzi \textit{(ang. initial branch length)} to parametr odpowiedzialny za początkową długość głównych gałęzi (ponieważ kolejne gałęzie pobierają procent długości z gałęzi nadrzędnej, ma to wpływ na wszystkie gałęzie) (rysunek \ref{fig:initBranchLen}),
+	\item[-] współczynnik zmniejszania długości \textit{(ang. length fall off factor)} i moc zmniejszania długości \textit{(ang. length fall off power)} to parametry związane wpływające na~długość wszystkich gałęzi,
 	\item[-] maksymalny promień \textit{(ang. max radius)} parametr określający promień drzewa (dotyczy zarówno gałęzi jak i pnia),
 	\item[-] spadek promienia \textit{(ang. radius falloff)} to parametr określający grubość gałęzi po rozgałęzieniu (gałęzie pobierają pewien procent grubości gałęzi macierzystej, parametr ten ustala ten procent),
 	\item[-] zamiatanie \textit{(ang. sweep)} to parametr, który wpływa na ogólny kierunek wszystkich gałęzi. Tworzy efekt podobny do tego, jak drzewo jest pod wpływem wiatru,
 	\item[-] stożek \textit{(ang. taper)} to parametr wpływający na stosunek grubości gałęzi na początku do końca (przy wyższych parametrach gałąź zaczyna przypominać stożek),
 	\item[-] wygięcie pnia \textit{(ang. trunk kink)} to parametr wpływający na krzywiznę pnia w miejscach, gdzie on się rozgałęzia,
-	\item[-] długość pnia \textit{(ang. trunk length)} to parametr wpływający na długość pnia (dotyczy tylko części pnia przed pierwszą gałęzią),
-	\item[-] skala gałązkowa \textit{(ang. twig scale)} to parametr, który wpływa na wielkość gałązek,
+	\item[-] długość pnia \textit{(ang. trunk length)} to parametr wpływający na długość pnia (dotyczy tylko części pnia przed pierwszą gałęzią) (rysunek \ref{fig:trunkLen}),
+	\item[-] skala gałęzi \textit{(ang. twig scale)} to parametr, który wpływa na wielkość gałązek,
 	\item[-] skrętność \textit{(ang. twist rate)} to parametr odpowiadający za skręt pnia,
 	\item[-] mnożnik \textit{(ang. Vmultiplier)} to parametr wpływający na rozciąganie tekstury,
-	\item[-] sezon \textit{(ang. season)} to parametr, który wpływa na kolor liści drzewa.
+	\item[-] sezon \textit{(ang. season)} to parametr, który wpływa na kolor liści drzewa (rysunek \ref{fig:season}).
 \end{itemize}
 
+
+\begin{figure}[H]
+	\centering\includegraphics[width=10cm]{grafika/params/Levels.png}
+	\caption{Zmiana parametru levels}
+    \label{fig:levels}
+\end{figure}
+
+\begin{figure}[H]
+	\centering\includegraphics[width=10cm]{grafika/params/TreeSteps.png}
+	\caption{Zmiana parametru tree steps}
+    \label{fig:treeSteps}
+\end{figure}
+
+\begin{figure}[H]
+	\centering\includegraphics[width=10cm]{grafika/params/ClimbRate.png}
+	\caption{Zmiana parametru climb rate}
+    \label{fig:climbRate}
+\end{figure}
+
+\begin{figure}[H]
+	\centering\includegraphics[width=10cm]{grafika/params/DropAmount.png}
+	\caption{Zmiana parametru drop amount}
+    \label{fig:dropAmount}
+\end{figure}
+
+\begin{figure}[H]
+	\centering\includegraphics[width=10cm]{grafika/params/InitBranchLen.png}
+	\caption{Zmiana parametru initial branch length}
+    \label{fig:initBranchLen}
+\end{figure}
+
+\begin{figure}[H]
+	\centering\includegraphics[width=10cm]{grafika/params/TrunkLen.png}
+	\caption{Zmiana parametru trunk length}
+    \label{fig:trunkLen}
+\end{figure}
+
+\begin{figure}[H]
+	\centering\includegraphics[width=10cm]{grafika/params/Season.png}
+	\caption{Zmiana parametru season}
+    \label{fig:season}
+\end{figure}
 
 \subsection{Ustawianie tekstur}
 
@@ -724,27 +764,27 @@ otwiera okno wyboru tekstury (rysunek \ref{fig:texchoosewin}), w którym
 można wybrać teksturę gałęzi i pnia drzewa z listy wszystkich tekstur 
 znajdujących się w wyżej wymienionych folderach.
 
-\begin{figure}[H]
-	\centering\includegraphics[width=15.5cm]{grafika/program/texture2.png}
+\begin{figure}[ht]
+	\centering\includegraphics[width=12cm]{grafika/program/texture2.png}
 	\caption{Okno wyboru tekstury}
     \label{fig:texchoosewin}
 \end{figure}
 
-Po wybraniu tekstur i potwierdzeniu przyciskiem ok, 
+Po wybraniu tekstur i potwierdzeniu przyciskiem OK, 
 tekstury drzew zostają zmienione na wybrane 
 tekstury (rysunek \ref{fig:texchoosewin2}).
 
 \begin{figure}[H]
-	\centering\includegraphics[width=15.5cm]{grafika/program/texture3.png}
+	\centering\includegraphics[width=12cm]{grafika/program/texture3.png}
 	\caption{Zmienione tekstury drzewa}
     \label{fig:texchoosewin2}
 \end{figure}
 
 Aby zmienić teksturę budynku należy wybrać w pasku menu plik 
-\textit{(ang. file)}, a następnie kliknąć na otworzyć 
+\textit{(ang. file)}, a~następnie kliknąć na otworzyć 
 teksturę budynku \textit{(ang. open building texture)} (rysunek \ref{fig:choosebuild}).
 Następnie zostanie otwarte okno wyboru pliku systemu operacyjnego. 
-Za pomocą tego okna wybieramy plik, który ma być użyty 
+Za~pomocą tego okna wybieramy plik, który ma być użyty 
 jako tekstura i naciśkamy przycisk OK. 
 Spowoduje to zmianę tekstury budynku (rysunek \ref{fig:choosebuild2}).
 
@@ -754,7 +794,7 @@ Spowoduje to zmianę tekstury budynku (rysunek \ref{fig:choosebuild2}).
     \label{fig:choosebuild}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[ht]
 	\centering\includegraphics[width=15.5cm]{grafika/program/texture5.png}
 	\caption{Zmieniona tekstura budynku}
     \label{fig:choosebuild2}
@@ -767,6 +807,17 @@ Funkcja ta pozwala na zapisanie utworzonych drzew, aby można je było
 wykorzystać później. Aby to zrobić, trzeba będzie 
 załadować wcześniej zapisaną konfigurację z pliku.
 Sam plik jest plikiem JSON (listing \ref{lst:treeFile}), w którym zapisane są wszystkie parametry.
+
+\begin{figure}[H]
+	\centering\includegraphics[width=15.5cm]{grafika/program/saveTree.png}
+	\caption{Opcja zapisu drzewa do pliku}
+    \label{fig:saveTree}
+\end{figure}
+
+Aby zapisać wybrane drzewo, w menu pasku wybierz opcję Zapisz 
+jako \textit{(ang. Save as)} (rysunek \ref{fig:saveTree}) lub naciśnąć kombinację klawiszy Ctrl+Shift+S. 
+Następnie należy wybrać katalog, w którym ma być zapisany plik, 
+wpisać jego nazwę i kliknąć przycisk Zapisz.
 
 \begin{lstlisting}[caption={Zawartość pliku drzewa}, label={lst:treeFile}]
 {
@@ -796,16 +847,6 @@ Sam plik jest plikiem JSON (listing \ref{lst:treeFile}), w którym zapisane są 
 \end{lstlisting}
 
 
-Aby zapisać wybrane drzewo, w menu pasku wybierz opcję Zapisz 
-jako \textit{(ang. Save as)} (rysunek \ref{fig:saveTree}) lub naciśnąć kombinację klawiszy Ctrl+Shift+S. 
-Następnie należy wybrać katalog, w którym ma być zapisany plik, 
-wpisać jego nazwę i kliknąć przycisk Zapisz.
-
-\begin{figure}[H]
-	\centering\includegraphics[width=15.5cm]{grafika/program/saveTree.png}
-	\caption{Opcja zapisu drzewa do pliku}
-    \label{fig:saveTree}
-\end{figure}
 
 
 \section{Struktura programu}
@@ -819,7 +860,7 @@ Główne klasy w programie to:
 \begin{itemize}
 	\item[-] MainWindow ta klasa jest główną klasą programu, opisuje logikę dla wszystkich komponentów okna programu, jak również wszystkie interakcje programu,
 	\item[-] OpenGlWidget to klasa opisująca logikę renderowania przestrzeni trójwymiarowej,
-	\item[-] Tree to klasa, która reprezentuje drzewa w programie. Klasa ta przechowuje logikę zmiany wzrostu drzewa, parametry, a także dwa obiekty klasy mesh - dla pnia i gałęzi drzewa oraz liści,
+	\item[-] Tree to klasa, która reprezentuje drzewa w programie. Klasa ta przechowuje logikę zmiany wzrostu drzewa, parametry, a także dwa obiekty klasy mesh - dla pnia i~gałęzi drzewa oraz liści,
 	\item[-] Mesh to klasa przechowująca wszystkie dane do budowy obiektów trójwymiarowych w środowisku opengl (wierzchołki, krawędzie, normale i mapy UV).
 \end{itemize}
 
@@ -831,9 +872,9 @@ Główne klasy w programie to:
 
 W celu zademonstrowania głównej funkcji programu 
 (symulacja wzrostu drzew), wykonałem dwa diagramy: 
-\begin{itemize}
-	\item[-] diagram sekwencyjny mający na celu zademonstrowanie współdziałania obiektów klas programu (rysunek \ref{fig:sequenceDiagram}),
-	\item[-] diagram procesu w celu przedstawienia logiki wzrostu drzew (rysunek \ref{fig:flowDiagram}).
+\begin{itemize}[noitemsep,topsep=0pt]
+	\item[-] diagram procesu w celu przedstawienia logiki wzrostu drzew (rysunek \ref{fig:flowDiagram}),
+	\item[-] diagram sekwencyjny mający na celu zademonstrowanie współdziałania obiektów klas programu (rysunek \ref{fig:sequenceDiagram}).
 \end{itemize}
 
 Na diagramie sekwencji widać, jak obiekt klasy 
@@ -849,16 +890,15 @@ Obiekt Mesh jest później używany do renderowania drzewa
 w oknie OpenGl.
 
 \begin{figure}[H]
-	\centering\includegraphics[width=15.5cm]{grafika/diagrams/sequence}
-	\caption{Diagram sekwencji}
-    \label{fig:sequenceDiagram}
-\end{figure}
-
-
-\begin{figure}[H]
 	\centering\includegraphics[height=10cm]{grafika/diagrams/flow}
 	\caption{Diagram procesu}
     \label{fig:flowDiagram}
+\end{figure}
+
+\begin{figure}[H]
+	\centering\includegraphics[width=15.5cm]{grafika/diagrams/sequence}
+	\caption{Diagram sekwencji}
+    \label{fig:sequenceDiagram}
 \end{figure}
 
 \chapter{Testy i rezultaty}
@@ -874,14 +914,15 @@ następujących konfiguracjach:
 	\item[-] pamięć główna 16 GB. 
 \end{itemize}
 
-Dzięki opracowaniu programu w środowisku QT, 
-program jest cross-platformowy i nie jest przywiązany 
+Dzięki opracowaniu programu w środowisku Qt, 
+program jest cross-platformowy i~nie jest przywiązany 
 do konkretnego systemu operacyjnego, sprzętu. 
 Ponadto, aby zainstalować oprogramowanie wystarczy 
-rozpakować archiwum z oprogramowaniem w dowolnym miejscu 
+rozpakować archiwum z oprogramowaniem w~dowolnym miejscu 
 na dysku twardym. Program wykorzystuje ścieżki względne, 
 dzięki czemu może pracować z dowolnego folderu 
-na dysku twardym. 
+na dysku twardym. Cechy te są istotne ze~Względu na plan 
+udostępnienia aplikacji szerszemu gronu odbiorców.
 
 Testowanie programu odbywało się w trakcie tworzenia programu, 
 jak również testowania ostatecznej wersji programu. 
@@ -905,17 +946,17 @@ aby naprawić problem.
 Wydajność oprogramowania jest dość mocno uzależniona 
 od używanego sprzętu. Na testowanym przeze mnie 
 urządzeniu wydajność wzrostu drzew jest bezpośrednio 
-związana z ilością umieszczonych drzew, a także ich 
+związana z liczbą umieszczonych drzew, a także ich 
 złożonością. Parametry drzewa, takie jak Levels i Tree steps, 
 mają szczególnie duży wpływ na wydajność.
 Są to jedyne parametry, które zmieniają liczbę wierzchołków i 
 krawędzi drzewa. Wszystkie inne parametry zmieniają jedynie 
 położenie wierzchołków. Każde drzewo przy Levels i Tree steps 
 ustawionych na 5 ma 2183 węzły i 6045 krawędzi. 
-Jeśli jednak ustawimy oba te parametry na 6, 
+Jeśli jednak ustawimy oba te~parametry na 6, 
 to liczba węzłów wzrośnie do 5408 węzłów i 13806 krawendzi. 
 Dlatego im więcej poziomów ma drzewo, tym większe będzie obciążenie urządzenia 
-i wolniejsze generowanie drzewa.
+i~wolniejsze generowanie drzewa.
 
 \section{Porównanie z innymi rozwiązaniami}
 
@@ -994,14 +1035,14 @@ Uniwersytetu Marii Curie Skłodowskiej w~Lublinie.
 \chapter*{Podsumowanie}
 
 Celem niniejszej pracy było opracowanie oraz 
-zastosowane systemu Lindenmaera w symulacji
+zastosowane systemu Lindenmaera w~symulacji
 wzrostu roślin.
 
 System Lindenmaera jest zbiorem reguł, które pozwalają na 
 zdefiniowanie generacji struktur fraktalnych. Pomimo 
 swojej prostoty L-system posiada cechy rozszerzalności, 
 dzięki czemu możliwe jest opisywanie złożonych struktur, 
-w tym roślin świata rzeczywistego.
+w tym roślin świata rzeczywistego \cite{impactsOnTheorCompSci}.
 
 Na wstępie przedstawiono szczegóły dotyczące systemu Lindenmeyera, 
 przykłady zastosowania i wyniki w przestrzeni dwuwymiarowej oraz 
@@ -1013,7 +1054,7 @@ Ostatnim krokiem było przetestowanie stworzonego oprogramowania
 i porównanie go z innymi podobnymi rozwiązaniami.
 
 Wadą przedstawionego rozwiązania jest niestabilność programu, 
-która objawia się zatrzymaniem programu. 
+która w szczególnych przypadkach objawia się zatrzymaniem programu. 
 Ten problem nie został rozwiązany.
 Nie ma też symulacji oświetlenia, co mogłoby być dobrym dodatkiem.
 
