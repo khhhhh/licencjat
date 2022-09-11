@@ -759,43 +759,43 @@ W moim programie występują następujące rodzaje parametrów:
 
 \begin{figure}[H]
 	\centering\includegraphics[width=10cm]{grafika/params/Levels.png}
-	\caption{Zmiana parametru levels}
+	\caption{Zmiana parametru levels: po lewej 1, po prawej 7, w zakresie od 1 do 7}
     \label{fig:levels}
 \end{figure}
 
 \begin{figure}[H]
-	\centering\includegraphics[width=10cm]{grafika/params/TreeSteps.png}
-	\caption{Zmiana parametru tree steps}
+	\centering\includegraphics[width=9cm]{grafika/params/TreeSteps.png}
+	\caption{Zmiana parametru tree steps: po lewej 1, po prawej 10, w zakresie od 1 do 10}
     \label{fig:treeSteps}
 \end{figure}
 
 \begin{figure}[H]
 	\centering\includegraphics[width=10cm]{grafika/params/ClimbRate.png}
-	\caption{Zmiana parametru climb rate}
+	\caption{Zmiana parametru climb rate: po lewej 90, po prawej 1, w zakresie od 1 do 100}
     \label{fig:climbRate}
 \end{figure}
 
 \begin{figure}[H]
 	\centering\includegraphics[width=10cm]{grafika/params/DropAmount.png}
-	\caption{Zmiana parametru drop amount}
+	\caption{Zmiana parametru drop amount: po lewej -69, po prawej 70, w zakresie od -90 do 90}
     \label{fig:dropAmount}
 \end{figure}
 
 \begin{figure}[H]
 	\centering\includegraphics[width=10cm]{grafika/params/InitBranchLen.png}
-	\caption{Zmiana parametru initial branch length}
+	\caption{Zmiana parametru initial branch length: po lewej 19, po prawej 100, w zakresie od 1 do 100}
     \label{fig:initBranchLen}
 \end{figure}
 
 \begin{figure}[H]
 	\centering\includegraphics[width=10cm]{grafika/params/TrunkLen.png}
-	\caption{Zmiana parametru trunk length}
+	\caption{Zmiana parametru trunk length: po lewej 10, po prawej 50, w zakresie od 1 do 100}
     \label{fig:trunkLen}
 \end{figure}
 
 \begin{figure}[H]
 	\centering\includegraphics[width=10cm]{grafika/params/Season.png}
-	\caption{Zmiana parametru season}
+	\caption{Zmiana parametru season: po lewej 1, po prawej 9, w zakresie od 1 do 9}
     \label{fig:season}
 \end{figure}
 
@@ -863,10 +863,7 @@ Sam plik jest plikiem JSON (listing \ref{lst:treeFile}), w którym zapisane są 
 {
     "mBranchFactor": 2.45,
     "mClimbRate": 0.37,
-    "mClumpMax": 0.45,
-    "mClumpMin": 0.40,
 	...
-    "mTwigScale": 0.38,
     "mTwistRate": 3.019,
     "mVMultiplier": 0.36
 }
@@ -994,7 +991,7 @@ Dlatego im więcej poziomów ma drzewo, tym większe będzie obciążenie urząd
 i~wolniejsze generowanie drzewa.
 
 Przetestowałem wydajność wzrostu dzrew i zrobiłem wykres 
-zależności średniej klatek na sekundę (ang. \textit{FPS}) 
+zależności średniej liczby klatek na sekundę (ang. \textit{FPS}) 
 od liczby wierzchołków (rysunek \ref{fig:chart}).
 
 \begin{figure}[H]
@@ -1002,7 +999,7 @@ od liczby wierzchołków (rysunek \ref{fig:chart}).
 	\begin{tikzpicture}
 		\begin{axis}[
 				xlabel={Liczba wierzchołków}, 
-				ylabel={Średnia klatek na sekundę},
+				ylabel={Średnia liczba klatek na sekundę},
 				xtick={2813,11252,19691,28130,36569,45008,53447},
 				ymajorgrids=true,
 				grid style=dashed,
@@ -1020,7 +1017,7 @@ od liczby wierzchołków (rysunek \ref{fig:chart}).
 		\end{axis} 
 	\end{tikzpicture}
 	\end{center}
-	\caption{Wykres zależności średniej klatek na sekundę od licbzy drzew}
+	\caption{Wykres zależności średniej liczby klatek na sekundę od licbzy drzew}
 	\label{fig:chart}
 \end{figure}
 
