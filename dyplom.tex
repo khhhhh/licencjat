@@ -22,8 +22,13 @@
 \usepackage{booktabs,caption}
 \usepackage[flushleft]{threeparttable}
 
+\usepackage{pgfplotstable}
+\usepackage{pgfplots}
+\usepackage{filecontents}
+
 \usepackage{geometry}
 
+\usepackage{pgfplots}
 \usepackage{tikz} 
 \usepackage{svg}
 \usepackage{lipsum}  
@@ -51,6 +56,52 @@
 }
 
 \def\crnrs#1{$^\ulcorner#1_\lrcorner$}
+
+\begin{filecontents*}{fpsVerts.data} 
+verts,fps
+2813,60.77
+5626,60
+8439,53.24
+11252,52.24
+14065,50.46
+16878,43.46
+19691,30.82
+22504,30.04
+25317,28.54
+28130,27.48
+30943,23.16
+33756,20.08
+36569,19.50
+39382,16.87
+42195,16.30
+45008,14.20
+47821,12.79
+50634,11.90
+53447,11.44
+\end{filecontents*}
+
+
+% \begin{filecontents*}{fpstrees.data} 
+% 1,60.77
+% 2,60
+% 3,53.24
+% 4,52.24
+% 5,50.46
+% 6,43.46
+% 7,30.82
+% 8,30.04
+% 9,28.54
+% 10,27.48
+% 11,23.16
+% 13,20.08
+% 15,19.50
+% 17,16.87
+% 19,16.30
+% 21,14.20
+% 23,12.79
+% 25,11.90
+% 27,11.44
+% \end{filecontents*}
 
 % treść
 \begin{document}
@@ -941,6 +992,37 @@ Jeśli jednak ustawimy oba te~parametry na 6,
 to liczba węzłów wzrośnie do 5408 węzłów i 13806 krawendzi. 
 Dlatego im więcej poziomów ma drzewo, tym większe będzie obciążenie urządzenia 
 i~wolniejsze generowanie drzewa.
+
+Przetestowałem wydajność wzrostu dzrew i zrobiłem wykres 
+zależności średniej klatek na sekundę (ang. \textit{FPS}) 
+od liczby wierzchołków.
+
+\begin{figure}[H]
+	\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+				xlabel={Liczba wierzchołków}, 
+				ylabel={Średnia klatek na sekundę},
+				xtick={2813,11252,19691,28130,36569,45008,53447},
+				ymajorgrids=true,
+				grid style=dashed,
+				% x tick label style={
+				% 	font=\small,
+				% 	rotate=90,
+				% 	/pgf/number format/.cd,%
+				% 	scaled x ticks = false,
+				% 	set thousands separator={.},
+				% 	fixed
+				% }
+			]
+			% Plot goes here 
+			\addplot[black, x=verts, y=fps] table [col sep=comma] {fpsVerts.data};
+		\end{axis} 
+	\end{tikzpicture}
+	\end{center}
+	\caption{Wykres zależności średniej klatek na sekundę od licbzy drzew}
+	\label{fig:chart}
+\end{figure}
 
 \section{Porównanie z innymi rozwiązaniami}
 
